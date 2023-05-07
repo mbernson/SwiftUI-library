@@ -16,6 +16,8 @@ ScrollView {
 .readableContentWidth()
 ```
 
+<img src="https://user-images.githubusercontent.com/477710/236678938-84c06253-0668-40c7-a63d-fd67df3bd1ab.png">
+
 ### Rounded rectangle corners
 
 Applies clipping to this view using corner radius, but only for the specified corners.
@@ -25,6 +27,8 @@ Rectangle()
     .fill(.orange)
     .cornerRadius(8, corners: [.topLeft, .bottomLeft, .topRight])
 ```
+
+<img width="564" src="https://user-images.githubusercontent.com/477710/236678948-a7feffe4-980f-4102-8d0e-dca1ce8d046a.png">
 
 ## Views
 
