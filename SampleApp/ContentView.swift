@@ -8,52 +8,17 @@
 import SwiftUI
 
 struct ContentView: View {
-    @State var presentDocumentPicker = false
-    @State var presentPhotoPicker = false
-    @State var presentSafariView = false
-    @State var presentShareSheet = false
-
     var body: some View {
         NavigationStack {
             List {
                 Section("Pickers") {
-                    Button("Document picker") {
-                        presentDocumentPicker.toggle()
-                    }
-                    .sheet(isPresented: $presentDocumentPicker) {
-                        DocumentPicker(contentTypes: [.image, .video], allowsMultipleSelection: true) { docs in
-                            print(docs)
-                        } dismiss: {
-                            presentDocumentPicker = false
-                        }
-                    }
-                    Button("Photo picker") {
-                        presentPhotoPicker.toggle()
-                    }
-                    .sheet(isPresented: $presentPhotoPicker) {
-                        PhotoPicker { items in
-                            print(items)
-                            presentPhotoPicker = false
-                        } dismiss: {
-                            presentPhotoPicker = false
-                        }
-                    }
+                    NavigationLink("Document picker", destination: DocumentPickerView())
+                    NavigationLink("Photo picker", destination: PhotoPickerView())
                 }
 
                 Section("System components") {
-                    Button("Safari view") {
-                        presentSafariView.toggle()
-                    }
-                    .sheet(isPresented: $presentSafariView) {
-                        SafariView(url: URL(string: "https://q42.com")!)
-                    }
-
-                    Button("Share sheet") {
-                        presentShareSheet.toggle()
-                    }
-                    .sheet(isPresented: $presentShareSheet) {
-                        ShareSheet(activityItems: [URL(string: "https://q42.com")!])
-                    }
+                    NavigationLink("Safari view", destination: SafariSheetView())
+                    NavigationLink("Share sheet", destination: ShareSheetView())
                 }
 
                 Section("Modifiers") {

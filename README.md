@@ -35,7 +35,7 @@ Rectangle()
 A document picker view that wraps `UIDocumentPickerViewController` and allows for customization options.
 
 ```swift
-struct ContentView: View {
+struct DocumentPickerView: View {
     @State var presentDocumentPicker = false
 
     var body: some View {
@@ -59,8 +59,8 @@ struct ContentView: View {
 A photo picker view that wraps `PHPickerViewController` and allows for customization options.
 
 ```swift
-struct ContentView: View {
-    @State var presentPhotoPicker = fals
+struct PhotoPickerView: View {
+    @State var presentPhotoPicker = false
 
     var body: some View {
         Button("Photo picker") {
@@ -90,7 +90,7 @@ An image cropper view that wraps [RSKImageCropViewController](https://github.com
 A share sheet view that wraps `UIActivityViewController`.
 
 ```swift
-struct ContentView: View {
+struct ShareSheetView: View {
     @State var presentShareSheet = false
 
     var body: some View {
@@ -109,7 +109,7 @@ struct ContentView: View {
 A web browser sheet that view wraps `SFSafariViewController`.
 
 ```swift
-struct ContentView: View {
+struct SafariSheetView: View {
     @State var presentSafariView = false
 
     var body: some View {
