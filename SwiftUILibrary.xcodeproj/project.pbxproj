@@ -117,21 +117,21 @@
 		D536784D2A07C7C70006FAF0 /* Views */ = {
 			isa = PBXGroup;
 			children = (
-				D536785C2A07C8C10006FAF0 /* Pickers */,
-				D53678532A07C8B50006FAF0 /* ImageCropView.swift */,
-				D53678542A07C8B50006FAF0 /* SafariView.swift */,
-				D53678552A07C8B50006FAF0 /* ShareSheet.swift */,
+				D536785C2A07C8C10006FAF0 /* Sheets */,
 			);
 			path = Views;
 			sourceTree = "<group>";
 		};
-		D536785C2A07C8C10006FAF0 /* Pickers */ = {
+		D536785C2A07C8C10006FAF0 /* Sheets */ = {
 			isa = PBXGroup;
 			children = (
+				D53678532A07C8B50006FAF0 /* ImageCropView.swift */,
+				D53678542A07C8B50006FAF0 /* SafariView.swift */,
+				D53678552A07C8B50006FAF0 /* ShareSheet.swift */,
 				D53678522A07C8B50006FAF0 /* DocumentPicker.swift */,
 				D53678512A07C8B50006FAF0 /* PhotoPicker.swift */,
 			);
-			path = Pickers;
+			path = Sheets;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
