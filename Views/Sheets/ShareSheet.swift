@@ -1,6 +1,5 @@
 //
 //  ShareSheet.swift
-//  StickerStudio
 //
 //  Created by Mathijs Bernson on 10/02/2023.
 //

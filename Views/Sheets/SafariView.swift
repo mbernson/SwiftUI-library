@@ -1,6 +1,5 @@
 //
 //  SafariView.swift
-//  StickerStudio
 //
 //  Created by Mathijs Bernson on 01/11/2022.
 //

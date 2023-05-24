@@ -45,7 +45,7 @@ struct ImageCropView: UIViewControllerRepresentable {
         let cropHandler: ImageCropHandler
         let dismissHandler: DismissHandler
 
-        init(cropHandler: @escaping ImageCropper.ImageCropHandler, dismissHandler: @escaping ImageCropper.DismissHandler) {
+        init(cropHandler: @escaping ImageCropHandler, dismissHandler: @escaping DismissHandler) {
             self.cropHandler = cropHandler
             self.dismissHandler = dismissHandler
         }
