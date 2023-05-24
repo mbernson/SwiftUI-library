@@ -24,6 +24,7 @@
 		D536786F2A07D4CE0006FAF0 /* DocumentPickerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D536786E2A07D4CE0006FAF0 /* DocumentPickerView.swift */; };
 		D53678712A07D4D30006FAF0 /* ShareSheetView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D53678702A07D4D30006FAF0 /* ShareSheetView.swift */; };
 		D53678732A07D4F10006FAF0 /* SafariSheetView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D53678722A07D4F10006FAF0 /* SafariSheetView.swift */; };
+		D5A448862A1E32600059C4A3 /* ErrorAlert.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5A448852A1E32600059C4A3 /* ErrorAlert.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -46,6 +47,7 @@
 		D536786E2A07D4CE0006FAF0 /* DocumentPickerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DocumentPickerView.swift; sourceTree = "<group>"; };
 		D53678702A07D4D30006FAF0 /* ShareSheetView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShareSheetView.swift; sourceTree = "<group>"; };
 		D53678722A07D4F10006FAF0 /* SafariSheetView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SafariSheetView.swift; sourceTree = "<group>"; };
+		D5A448852A1E32600059C4A3 /* ErrorAlert.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ErrorAlert.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -110,6 +112,7 @@
 			children = (
 				D536784B2A07C7C70006FAF0 /* ReadableContentWidth.swift */,
 				D536784C2A07C7C70006FAF0 /* RoundedRectangleCorners.swift */,
+				D5A448852A1E32600059C4A3 /* ErrorAlert.swift */,
 			);
 			path = Modifiers;
 			sourceTree = "<group>";
@@ -217,6 +220,7 @@
 				D536784F2A07C7C70006FAF0 /* RoundedRectangleCorners.swift in Sources */,
 				D53678732A07D4F10006FAF0 /* SafariSheetView.swift in Sources */,
 				D53678582A07C8B50006FAF0 /* DocumentPicker.swift in Sources */,
+				D5A448862A1E32600059C4A3 /* ErrorAlert.swift in Sources */,
 				D536783D2A07C75C0006FAF0 /* SwiftUILibraryApp.swift in Sources */,
 				D536785E2A07CC440006FAF0 /* ReadableContentWidthView.swift in Sources */,
 			);
