@@ -7,7 +7,7 @@
 import SwiftUI
 
 private struct ReadableContentWidth: ViewModifier {
-    private let measureViewController = UIViewController()
+    private static let measureViewController = UIViewController()
 
     @State private var orientation: UIDeviceOrientation = UIDevice.current.orientation
 
@@ -20,6 +20,7 @@ private struct ReadableContentWidth: ViewModifier {
     }
 
     private func readableWidth(for orientation: UIDeviceOrientation) -> CGFloat {
+        let measureViewController = Self.measureViewController
         measureViewController.view.frame = UIScreen.main.bounds
         let readableContentSize = measureViewController.view.readableContentGuide.layoutFrame.size
         return readableContentSize.width
