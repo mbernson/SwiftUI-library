@@ -25,6 +25,7 @@
 		D53678712A07D4D30006FAF0 /* ShareSheetView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D53678702A07D4D30006FAF0 /* ShareSheetView.swift */; };
 		D53678732A07D4F10006FAF0 /* SafariSheetView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D53678722A07D4F10006FAF0 /* SafariSheetView.swift */; };
 		D5A448862A1E32600059C4A3 /* ErrorAlert.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5A448852A1E32600059C4A3 /* ErrorAlert.swift */; };
+		D5A4488A2A1E359E0059C4A3 /* CameraView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5A448892A1E359E0059C4A3 /* CameraView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -48,6 +49,7 @@
 		D53678702A07D4D30006FAF0 /* ShareSheetView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShareSheetView.swift; sourceTree = "<group>"; };
 		D53678722A07D4F10006FAF0 /* SafariSheetView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SafariSheetView.swift; sourceTree = "<group>"; };
 		D5A448852A1E32600059C4A3 /* ErrorAlert.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ErrorAlert.swift; sourceTree = "<group>"; };
+		D5A448892A1E359E0059C4A3 /* CameraView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CameraView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -133,6 +135,7 @@
 				D53678552A07C8B50006FAF0 /* ShareSheet.swift */,
 				D53678522A07C8B50006FAF0 /* DocumentPicker.swift */,
 				D53678512A07C8B50006FAF0 /* PhotoPicker.swift */,
+				D5A448892A1E359E0059C4A3 /* CameraView.swift */,
 			);
 			path = Sheets;
 			sourceTree = "<group>";
@@ -219,6 +222,7 @@
 				D536786D2A07D4BD0006FAF0 /* PhotoPickerView.swift in Sources */,
 				D536784F2A07C7C70006FAF0 /* RoundedRectangleCorners.swift in Sources */,
 				D53678732A07D4F10006FAF0 /* SafariSheetView.swift in Sources */,
+				D5A4488A2A1E359E0059C4A3 /* CameraView.swift in Sources */,
 				D53678582A07C8B50006FAF0 /* DocumentPicker.swift in Sources */,
 				D5A448862A1E32600059C4A3 /* ErrorAlert.swift in Sources */,
 				D536783D2A07C75C0006FAF0 /* SwiftUILibraryApp.swift in Sources */,
