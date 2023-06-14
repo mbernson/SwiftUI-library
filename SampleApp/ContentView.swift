@@ -24,6 +24,7 @@ struct ContentView: View {
                 Section("Modifiers") {
                     NavigationLink("Readable content width", destination: ReadableContentWidthView())
                     NavigationLink("Rounded rectangle corners", destination: RoundedRectangleCornersView())
+                    NavigationLink("Device shake", destination: DeviceShakeView())
                 }
             }
             .navigationTitle("SwiftUI library")
