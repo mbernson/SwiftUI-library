@@ -9,7 +9,7 @@ import SwiftUI
 
 struct ContentView: View {
     var body: some View {
-        NavigationStack {
+        NavigationView {
             List {
                 Section("Pickers") {
                     NavigationLink("Document picker", destination: DocumentPickerView())
@@ -19,6 +19,7 @@ struct ContentView: View {
                 Section("System components") {
                     NavigationLink("Safari view", destination: SafariSheetView())
                     NavigationLink("Share sheet", destination: ShareSheetView())
+                    NavigationLink("Camera view", destination: CameraDemoView())
                 }
 
                 Section("Modifiers") {

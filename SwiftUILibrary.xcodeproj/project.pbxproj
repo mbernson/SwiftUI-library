@@ -26,6 +26,7 @@
 		D53678732A07D4F10006FAF0 /* SafariSheetView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D53678722A07D4F10006FAF0 /* SafariSheetView.swift */; };
 		D562A5C92A39BD59009D62C4 /* DeviceShake.swift in Sources */ = {isa = PBXBuildFile; fileRef = D562A5C82A39BD59009D62C4 /* DeviceShake.swift */; };
 		D562A5CB2A39BD62009D62C4 /* DeviceShakeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D562A5CA2A39BD62009D62C4 /* DeviceShakeView.swift */; };
+		D562A5D22A39C172009D62C4 /* CameraDemoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D562A5D12A39C172009D62C4 /* CameraDemoView.swift */; };
 		D5A448862A1E32600059C4A3 /* ErrorAlert.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5A448852A1E32600059C4A3 /* ErrorAlert.swift */; };
 		D5A4488A2A1E359E0059C4A3 /* CameraView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5A448892A1E359E0059C4A3 /* CameraView.swift */; };
 /* End PBXBuildFile section */
@@ -52,6 +53,7 @@
 		D53678722A07D4F10006FAF0 /* SafariSheetView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SafariSheetView.swift; sourceTree = "<group>"; };
 		D562A5C82A39BD59009D62C4 /* DeviceShake.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DeviceShake.swift; sourceTree = "<group>"; };
 		D562A5CA2A39BD62009D62C4 /* DeviceShakeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeviceShakeView.swift; sourceTree = "<group>"; };
+		D562A5D12A39C172009D62C4 /* CameraDemoView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CameraDemoView.swift; sourceTree = "<group>"; };
 		D5A448852A1E32600059C4A3 /* ErrorAlert.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ErrorAlert.swift; sourceTree = "<group>"; };
 		D5A448892A1E359E0059C4A3 /* CameraView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CameraView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -150,6 +152,7 @@
 				D536786E2A07D4CE0006FAF0 /* DocumentPickerView.swift */,
 				D53678702A07D4D30006FAF0 /* ShareSheetView.swift */,
 				D562A5CA2A39BD62009D62C4 /* DeviceShakeView.swift */,
+				D562A5D12A39C172009D62C4 /* CameraDemoView.swift */,
 			);
 			path = Demos;
 			sourceTree = "<group>";
@@ -224,6 +227,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D562A5D22A39C172009D62C4 /* CameraDemoView.swift in Sources */,
 				D562A5C92A39BD59009D62C4 /* DeviceShake.swift in Sources */,
 				D536784E2A07C7C70006FAF0 /* ReadableContentWidth.swift in Sources */,
 				D53678602A07CCA30006FAF0 /* RoundedRectangleCornersView.swift in Sources */,
