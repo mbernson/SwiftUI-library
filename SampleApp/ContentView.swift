@@ -16,6 +16,10 @@ struct ContentView: View {
                     NavigationLink("Photo picker", destination: PhotoPickerView())
                 }
 
+                Section("Components") {
+                    NavigationLink("Image viewer", destination: ImageViewerView())
+                }
+
                 Section("System components") {
                     NavigationLink("Safari view", destination: SafariSheetView())
                     NavigationLink("Share sheet", destination: ShareSheetView())
