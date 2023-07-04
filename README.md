@@ -1,7 +1,28 @@
 # SwiftUI-library
 
 My personal library of useful SwiftUI code snippets.
-It includes modifiers and views that I bring from project to project.
+It includes most of the modifiers and views that I copy-paste from project to project.
+
+Almost all are compatible with iOS 14 and later. Many of these views and modifiers are very useful for compatibility with iOS 14 and 15, where you can't use many of the fancy new SwiftUI components.
+
+## Contents
+
+* Views
+    * Generic
+        * QRCodeImage: Display a string/URL/data as a QR code
+        * DocumentPicker: Wrapper for UIDocumentPickerViewController
+        * ShareSheet: Wrapper for UIActivityViewController (for using a share sheet when you can't use Apple's ShareLink view)
+        * SafariView: Wrapper for SFSafariViewController
+    * Camera/photo
+        * CameraView: Take a picture using the camera (full screen cover)
+        * PhotoPicker: Pick a photo from the user's Photo library
+        * ImageCropView: Crop an image (uses [RSKImageCropper](https://github.com/ruslanskorb/RSKImageCropper) under the hood)
+* Modifiers
+    * DeviceShake: Detect when the device is shaken
+    * ErrorAlert: Present a LocalizedError as an alert
+    * ReadableContentWidth: Constrains a view to the Apple-defined readable content guides
+    * RoundedRectangleCorners: Round only certain corners of a view
+    * ScreenBrightness: Brighten the screen when the view appears, dim again when it disappears
 
 ## Modifiers
 
