@@ -22,6 +22,10 @@ struct ContentView: View {
                     NavigationLink("Camera view", destination: CameraDemoView())
                 }
 
+                Section("Views") {
+                    NavigationLink("QR code view", destination: QRCodeView())
+                }
+
                 Section("Modifiers") {
                     NavigationLink("Readable content width", destination: ReadableContentWidthView())
                     NavigationLink("Rounded rectangle corners", destination: RoundedRectangleCornersView())
