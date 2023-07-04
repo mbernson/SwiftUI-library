@@ -24,6 +24,9 @@
 		D536786F2A07D4CE0006FAF0 /* DocumentPickerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D536786E2A07D4CE0006FAF0 /* DocumentPickerView.swift */; };
 		D53678712A07D4D30006FAF0 /* ShareSheetView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D53678702A07D4D30006FAF0 /* ShareSheetView.swift */; };
 		D53678732A07D4F10006FAF0 /* SafariSheetView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D53678722A07D4F10006FAF0 /* SafariSheetView.swift */; };
+		D5435C6D2A544BCA0061A2BC /* QRCodeImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5435C6C2A544BCA0061A2BC /* QRCodeImage.swift */; };
+		D5435C6F2A544CC40061A2BC /* QRCodeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5435C6E2A544CC40061A2BC /* QRCodeView.swift */; };
+		D5435C712A54552C0061A2BC /* ScreenBrightness.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5435C702A54552C0061A2BC /* ScreenBrightness.swift */; };
 		D562A5C92A39BD59009D62C4 /* DeviceShake.swift in Sources */ = {isa = PBXBuildFile; fileRef = D562A5C82A39BD59009D62C4 /* DeviceShake.swift */; };
 		D562A5CB2A39BD62009D62C4 /* DeviceShakeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D562A5CA2A39BD62009D62C4 /* DeviceShakeView.swift */; };
 		D562A5D22A39C172009D62C4 /* CameraDemoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D562A5D12A39C172009D62C4 /* CameraDemoView.swift */; };
@@ -51,6 +54,9 @@
 		D536786E2A07D4CE0006FAF0 /* DocumentPickerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DocumentPickerView.swift; sourceTree = "<group>"; };
 		D53678702A07D4D30006FAF0 /* ShareSheetView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShareSheetView.swift; sourceTree = "<group>"; };
 		D53678722A07D4F10006FAF0 /* SafariSheetView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SafariSheetView.swift; sourceTree = "<group>"; };
+		D5435C6C2A544BCA0061A2BC /* QRCodeImage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QRCodeImage.swift; sourceTree = "<group>"; };
+		D5435C6E2A544CC40061A2BC /* QRCodeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QRCodeView.swift; sourceTree = "<group>"; };
+		D5435C702A54552C0061A2BC /* ScreenBrightness.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScreenBrightness.swift; sourceTree = "<group>"; };
 		D562A5C82A39BD59009D62C4 /* DeviceShake.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DeviceShake.swift; sourceTree = "<group>"; };
 		D562A5CA2A39BD62009D62C4 /* DeviceShakeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeviceShakeView.swift; sourceTree = "<group>"; };
 		D562A5D12A39C172009D62C4 /* CameraDemoView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CameraDemoView.swift; sourceTree = "<group>"; };
@@ -117,6 +123,7 @@
 				D536784B2A07C7C70006FAF0 /* ReadableContentWidth.swift */,
 				D536784C2A07C7C70006FAF0 /* RoundedRectangleCorners.swift */,
 				D5A448852A1E32600059C4A3 /* ErrorAlert.swift */,
+				D5435C702A54552C0061A2BC /* ScreenBrightness.swift */,
 			);
 			path = Modifiers;
 			sourceTree = "<group>";
@@ -125,6 +132,7 @@
 			isa = PBXGroup;
 			children = (
 				D536785C2A07C8C10006FAF0 /* Sheets */,
+				D5435C6C2A544BCA0061A2BC /* QRCodeImage.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -153,6 +161,7 @@
 				D53678702A07D4D30006FAF0 /* ShareSheetView.swift */,
 				D562A5CA2A39BD62009D62C4 /* DeviceShakeView.swift */,
 				D562A5D12A39C172009D62C4 /* CameraDemoView.swift */,
+				D5435C6E2A544CC40061A2BC /* QRCodeView.swift */,
 			);
 			path = Demos;
 			sourceTree = "<group>";
@@ -230,7 +239,9 @@
 				D562A5D22A39C172009D62C4 /* CameraDemoView.swift in Sources */,
 				D562A5C92A39BD59009D62C4 /* DeviceShake.swift in Sources */,
 				D536784E2A07C7C70006FAF0 /* ReadableContentWidth.swift in Sources */,
+				D5435C712A54552C0061A2BC /* ScreenBrightness.swift in Sources */,
 				D53678602A07CCA30006FAF0 /* RoundedRectangleCornersView.swift in Sources */,
+				D5435C6D2A544BCA0061A2BC /* QRCodeImage.swift in Sources */,
 				D536785B2A07C8B50006FAF0 /* ShareSheet.swift in Sources */,
 				D536785A2A07C8B50006FAF0 /* SafariView.swift in Sources */,
 				D536783F2A07C75C0006FAF0 /* ContentView.swift in Sources */,
@@ -240,6 +251,7 @@
 				D53678592A07C8B50006FAF0 /* ImageCropView.swift in Sources */,
 				D536786D2A07D4BD0006FAF0 /* PhotoPickerView.swift in Sources */,
 				D536784F2A07C7C70006FAF0 /* RoundedRectangleCorners.swift in Sources */,
+				D5435C6F2A544CC40061A2BC /* QRCodeView.swift in Sources */,
 				D53678732A07D4F10006FAF0 /* SafariSheetView.swift in Sources */,
 				D5A4488A2A1E359E0059C4A3 /* CameraView.swift in Sources */,
 				D53678582A07C8B50006FAF0 /* DocumentPicker.swift in Sources */,
