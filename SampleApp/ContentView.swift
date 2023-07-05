@@ -42,6 +42,7 @@ struct ContentView: View {
                     NavigationLink("Readable content width", destination: ReadableContentWidthView())
                     NavigationLink("Rounded rectangle corners", destination: RoundedRectangleCornersView())
                     NavigationLink("Device shake", destination: DeviceShakeView())
+                    NavigationLink("Screen brightness", destination: QRCodeView())
                 } header: {
                     Text("Modifiers")
                 }
