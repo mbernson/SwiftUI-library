@@ -8,14 +8,14 @@
 import SwiftUI
 
 struct CameraDemoView: View {
-    @Environment(\.dismiss) var dismiss
+    @Environment(\.presentationMode) var presentationMode
 
     var body: some View {
         CameraView(photoPicked: { photo in
             print(photo)
         }, dismiss: {
             print("User cancelled")
-            dismiss()
+//            presentationMode.isPresented = false
         })
         .ignoresSafeArea()
         .navigationBarHidden(true)

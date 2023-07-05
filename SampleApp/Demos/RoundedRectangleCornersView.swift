@@ -21,7 +21,7 @@ struct RoundedCornerButtonStyle: ButtonStyle {
             .foregroundColor(.white)
             .padding()
             .frame(maxWidth: .infinity)
-            .background(.orange.opacity(configuration.isPressed ? 0.5 : 1.0))
+            .background(Color.orange.opacity(configuration.isPressed ? 0.5 : 1.0))
             .cornerRadius(8, corners: [.topLeft, .bottomLeft, .topRight])
     }
 }
