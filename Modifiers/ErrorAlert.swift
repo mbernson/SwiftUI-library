@@ -7,6 +7,7 @@
 
 import SwiftUI
 
+@available(iOS 15.0, *)
 private struct ErrorAlert<E: LocalizedError>: ViewModifier {
     @Binding var error: E?
     let buttonTitle: LocalizedStringKey
@@ -22,6 +23,7 @@ private struct ErrorAlert<E: LocalizedError>: ViewModifier {
     }
 }
 
+@available(iOS 15.0, *)
 extension View {
     /// Presents an alert when a localized error is present.
     func errorAlert<E: LocalizedError>(error: Binding<E?>, buttonTitle: LocalizedStringKey = "Ok") -> some View {

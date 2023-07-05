@@ -14,7 +14,6 @@ struct PhotoPickerView: View {
         Button("Present photo picker") {
             presentPhotoPicker.toggle()
         }
-        .buttonStyle(.borderedProminent)
         .sheet(isPresented: $presentPhotoPicker) {
             PhotoPicker { items in
                 // Do something with the resulting NSItemProviders here

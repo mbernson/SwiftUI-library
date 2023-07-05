@@ -14,7 +14,6 @@ struct SafariSheetView: View {
         Button("Present Safari view") {
             presentSafariView.toggle()
         }
-        .buttonStyle(.borderedProminent)
         .sheet(isPresented: $presentSafariView) {
             SafariView(url: URL(string: "https://q42.com")!)
         }

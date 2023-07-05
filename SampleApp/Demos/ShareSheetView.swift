@@ -14,7 +14,6 @@ struct ShareSheetView: View {
         Button("Present share sheet") {
             presentShareSheet.toggle()
         }
-        .buttonStyle(.borderedProminent)
         .sheet(isPresented: $presentShareSheet) {
             ShareSheet(activityItems: [URL(string: "https://q42.com")!])
         }
