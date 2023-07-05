@@ -19,11 +19,17 @@ struct ContentView: View {
                 }
 
                 Section {
-                    NavigationLink("Safari view", destination: SafariSheetView())
-                    NavigationLink("Share sheet", destination: ShareSheetView())
+                    NavigationLink("Image viewer", destination: ImageViewerView())
                     NavigationLink("Camera view", destination: CameraDemoView())
                 } header: {
-                    Text("System components")
+                    Text("Views")
+                }
+
+                Section {
+                    NavigationLink("Safari sheet", destination: SafariSheetView())
+                    NavigationLink("Share sheet", destination: ShareSheetView())
+                } header: {
+                    Text("Sheets")
                 }
 
                 Section {
@@ -36,6 +42,7 @@ struct ContentView: View {
                     NavigationLink("Readable content width", destination: ReadableContentWidthView())
                     NavigationLink("Rounded rectangle corners", destination: RoundedRectangleCornersView())
                     NavigationLink("Device shake", destination: DeviceShakeView())
+                    NavigationLink("Screen brightness", destination: QRCodeView())
                 } header: {
                     Text("Modifiers")
                 }

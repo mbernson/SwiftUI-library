@@ -9,6 +9,7 @@ Almost all are compatible with iOS 14 and later. Many of these views and modifie
 
 * Views
     * Generic
+        * ImageViewer: View for zooming/panning a UIImage
         * QRCodeImage: Display a string/URL/data as a QR code
         * DocumentPicker: Wrapper for UIDocumentPickerViewController
         * ShareSheet: Wrapper for UIActivityViewController (for using a share sheet when you can't use Apple's ShareLink view)
