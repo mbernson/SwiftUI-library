@@ -9,12 +9,23 @@ import SwiftUI
 import UIKit
 
 struct ImageViewer: UIViewControllerRepresentable {
-    let image: UIImage?
-    let maximumZoomScale: CGFloat
-    let showsIndicators: Bool
+    private let content: Content
+    private let maximumZoomScale: CGFloat
+    private let showsIndicators: Bool
+
+    enum Content {
+        case image(UIImage?)
+        case url(URL?)
+    }
 
     init(image: UIImage?, maximumZoomScale: CGFloat = 3.0, showsIndicators: Bool = true) {
-        self.image = image
+        self.content = .image(image)
+        self.maximumZoomScale = maximumZoomScale
+        self.showsIndicators = showsIndicators
+    }
+
+    init(url: URL?, maximumZoomScale: CGFloat = 3.0, showsIndicators: Bool = true) {
+        self.content = .url(url)
         self.maximumZoomScale = maximumZoomScale
         self.showsIndicators = showsIndicators
     }
@@ -24,7 +35,12 @@ struct ImageViewer: UIViewControllerRepresentable {
     }
 
     func updateUIViewController(_ viewController: ImageViewerController, context: Context) {
-        viewController.setImage(image)
+        switch content {
+        case .image(let image):
+            viewController.setImage(image)
+        case .url(let url):
+            viewController.setURL(url)
+        }
         viewController.scrollView.maximumZoomScale = maximumZoomScale
         viewController.scrollView.showsVerticalScrollIndicator = showsIndicators
         viewController.scrollView.showsHorizontalScrollIndicator = showsIndicators
@@ -34,14 +50,33 @@ struct ImageViewer: UIViewControllerRepresentable {
 class ImageViewerController: UIViewController, UIScrollViewDelegate {
     private let imageView = UIImageView()
     fileprivate let scrollView = UIScrollView()
+    private var previousURL: URL?
 
     func setImage(_ image: UIImage?) {
         imageView.image = image
         resetZoom(animated: false)
     }
 
+    func setURL(_ url: URL?) {
+        guard let url else {
+            imageView.image = nil
+            return
+        }
+        guard url != previousURL else { return }
+        previousURL = url
+        Task {
+            do {
+                let request = URLRequest(url: url)
+                let (data, _) = try await URLSession.shared.data(for: request)
+                self.imageView.image = UIImage(data: data)
+            } catch {}
+        }
+    }
+
     override func viewDidLoad() {
         super.viewDidLoad()
+
+        view.backgroundColor = .clear
 
         view.addSubview(scrollView)
         scrollView.addSubview(imageView)
@@ -61,9 +96,12 @@ class ImageViewerController: UIViewController, UIScrollViewDelegate {
         ])
 
         // Add double tap to zoom gesture
-        let doubleTapRecognizer = UITapGestureRecognizer(target: self, action: #selector(didDoubleTap))
+        let doubleTapRecognizer = UITapGestureRecognizer(target: self, action: #selector(toggleZoom))
         doubleTapRecognizer.numberOfTapsRequired = 2
         scrollView.addGestureRecognizer(doubleTapRecognizer)
+
+        let longPressRecognizer = UILongPressGestureRecognizer(target: self, action: #selector(shareImage))
+        scrollView.addGestureRecognizer(longPressRecognizer)
     }
 
     override func viewWillAppear(_ animated: Bool) {
@@ -71,7 +109,7 @@ class ImageViewerController: UIViewController, UIScrollViewDelegate {
         resetZoom(animated: false)
     }
 
-    @objc private func didDoubleTap(_ sender: UITapGestureRecognizer) {
+    @objc private func toggleZoom(_ sender: UITapGestureRecognizer) {
         if scrollView.zoomScale == scrollView.minimumZoomScale {
           scrollView.setZoomScale(scrollView.maximumZoomScale / 2, animated: true)
         } else {
@@ -86,11 +124,19 @@ class ImageViewerController: UIViewController, UIScrollViewDelegate {
     func viewForZooming(in scrollView: UIScrollView) -> UIView? {
         return imageView
     }
+
+    @objc func shareImage(_ sender: UILongPressGestureRecognizer) {
+        guard let image = imageView.image, sender.state == .began else { return }
+        let activityController = UIActivityViewController(activityItems: [image], applicationActivities: nil)
+        activityController.popoverPresentationController?.sourceView = imageView
+        activityController.popoverPresentationController?.sourceRect = CGRect(origin: sender.location(in: imageView), size: CGSize(width: 44, height: 44))
+        present(activityController, animated: true)
+    }
 }
 
 struct ImageViewer_Previews: PreviewProvider {
     static var previews: some View {
-        ImageViewer(image: UIImage(named: "demoImage"))
+        ImageViewer(image: UIImage(named: "Logo"))
             .ignoresSafeArea()
     }
 }
