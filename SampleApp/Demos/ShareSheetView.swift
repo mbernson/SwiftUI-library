@@ -17,6 +17,9 @@ struct ShareSheetView: View {
         .sheet(isPresented: $presentShareSheet) {
             ShareSheet(activityItems: [URL(string: "https://q42.com")!]) { success in
                 print("Share finished successfully: \(success)")
+                if success {
+                    presentShareSheet = false
+                }
             }
         }
     }
