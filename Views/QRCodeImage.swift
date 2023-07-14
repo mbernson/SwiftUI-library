@@ -8,6 +8,14 @@
 import SwiftUI
 import CoreImage.CIFilterBuiltins
 
+/// A view that renders the given data as a QR code.
+/// It behaves just like a SwiftUI `Image`, including the `resizable()` and `scaledToFit()` methods.
+///
+/// The following example shows how to create a QR code from a URL and scale it to fit within its container:
+///
+///     QRCodeImage(url: URL(string: "https://q42.nl/")!)
+///         .resizable()
+///         .scaledToFit()
 struct QRCodeImage: View {
     let data: Data?
 
@@ -23,11 +31,9 @@ struct QRCodeImage: View {
         self.data = data
     }
 
-    var body: some View {
+    var image: Image {
         Image(uiImage: generateQRCode(from: data) ?? UIImage())
-            .resizable()
             .interpolation(.none)
-            .scaledToFit()
     }
 
     private func generateQRCode(from data: Data?) -> UIImage? {
@@ -41,10 +47,28 @@ struct QRCodeImage: View {
             .flatMap { context.createCGImage($0, from: $0.extent) }
             .map { UIImage(cgImage: $0) }
     }
+
+    var body: some View {
+        image
+    }
+
+    func resizable(capInsets: EdgeInsets = EdgeInsets(), resizingMode: Image.ResizingMode = .stretch) -> Image {
+        image.resizable(capInsets: capInsets, resizingMode: resizingMode)
+    }
+
+    func scaledToFit() -> some View {
+        image.scaledToFit()
+    }
+
+    func scaledToFill() -> some View {
+        image.scaledToFill()
+    }
 }
 
 struct QRCodeImage_Previews: PreviewProvider {
     static var previews: some View {
         QRCodeImage(url: URL(string: "https://q42.nl/")!)
+            .resizable()
+            .scaledToFit()
     }
 }

@@ -10,6 +10,8 @@ import SwiftUI
 struct QRCodeView: View {
     var body: some View {
         QRCodeImage(url: URL(string: "https://q42.nl/")!)
+            .resizable()
+            .scaledToFit()
             .padding()
             .increasedScreenBrightness()
     }
