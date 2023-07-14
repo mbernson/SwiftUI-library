@@ -1,4 +1,4 @@
-# SwiftUI-library
+# SwiftUI snippet library
 
 My personal library of useful SwiftUI code snippets.
 It includes most of the modifiers and views that I copy-paste from project to project.
