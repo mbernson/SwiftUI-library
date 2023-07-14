@@ -2,6 +2,7 @@
 
 My personal library of useful SwiftUI code snippets.
 It includes most of the modifiers and views that I copy-paste from project to project.
+Each Swift file from the Views or Modifiers directories stands on its own without any 3rd party dependencies, so it can easily be copied into your project.
 
 Almost all are compatible with iOS 14 and later. Many of these views and modifiers are very useful for compatibility with iOS 14 and 15, where you can't use many of the fancy new SwiftUI components.
 
