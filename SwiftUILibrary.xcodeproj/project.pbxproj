@@ -34,6 +34,8 @@
 		D578FE342A3AF24500CC6E6B /* ImageViewerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D578FE332A3AF24500CC6E6B /* ImageViewerView.swift */; };
 		D5A448862A1E32600059C4A3 /* ErrorAlert.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5A448852A1E32600059C4A3 /* ErrorAlert.swift */; };
 		D5A4488A2A1E359E0059C4A3 /* CameraView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5A448892A1E359E0059C4A3 /* CameraView.swift */; };
+		D5C76ACF2A61AEBA00B7469C /* MailComposeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5C76ACE2A61AEBA00B7469C /* MailComposeView.swift */; };
+		D5C76AD12A61AEF500B7469C /* MailDemoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5C76AD02A61AEF500B7469C /* MailDemoView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -66,6 +68,8 @@
 		D578FE332A3AF24500CC6E6B /* ImageViewerView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ImageViewerView.swift; sourceTree = "<group>"; };
 		D5A448852A1E32600059C4A3 /* ErrorAlert.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ErrorAlert.swift; sourceTree = "<group>"; };
 		D5A448892A1E359E0059C4A3 /* CameraView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CameraView.swift; sourceTree = "<group>"; };
+		D5C76ACE2A61AEBA00B7469C /* MailComposeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MailComposeView.swift; sourceTree = "<group>"; };
+		D5C76AD02A61AEF500B7469C /* MailDemoView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MailDemoView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -151,6 +155,7 @@
 				D53678522A07C8B50006FAF0 /* DocumentPicker.swift */,
 				D53678512A07C8B50006FAF0 /* PhotoPicker.swift */,
 				D5A448892A1E359E0059C4A3 /* CameraView.swift */,
+				D5C76ACE2A61AEBA00B7469C /* MailComposeView.swift */,
 			);
 			path = Sheets;
 			sourceTree = "<group>";
@@ -168,6 +173,7 @@
 				D562A5CA2A39BD62009D62C4 /* DeviceShakeView.swift */,
 				D562A5D12A39C172009D62C4 /* CameraDemoView.swift */,
 				D5435C6E2A544CC40061A2BC /* QRCodeView.swift */,
+				D5C76AD02A61AEF500B7469C /* MailDemoView.swift */,
 			);
 			path = Demos;
 			sourceTree = "<group>";
@@ -262,6 +268,8 @@
 				D5435C6F2A544CC40061A2BC /* QRCodeView.swift in Sources */,
 				D53678732A07D4F10006FAF0 /* SafariSheetView.swift in Sources */,
 				D5A4488A2A1E359E0059C4A3 /* CameraView.swift in Sources */,
+				D5C76ACF2A61AEBA00B7469C /* MailComposeView.swift in Sources */,
+				D5C76AD12A61AEF500B7469C /* MailDemoView.swift in Sources */,
 				D53678582A07C8B50006FAF0 /* DocumentPicker.swift in Sources */,
 				D5A448862A1E32600059C4A3 /* ErrorAlert.swift in Sources */,
 				D536783D2A07C75C0006FAF0 /* SwiftUILibraryApp.swift in Sources */,

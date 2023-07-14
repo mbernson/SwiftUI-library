@@ -38,6 +38,10 @@ struct ContentView: View {
                     Text("Views")
                 }
 
+                if #available(iOS 15.0, *) {
+                    NavigationLink("Mail compose view", destination: MailDemoView())
+                }
+
                 Section {
                     NavigationLink("Readable content width", destination: ReadableContentWidthView())
                     NavigationLink("Rounded rectangle corners", destination: RoundedRectangleCornersView())
