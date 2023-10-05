@@ -8,23 +8,31 @@
 import SwiftUI
 import UIKit
 
+/// A view that lets the user take a picture using the camera
 struct CameraView: UIViewControllerRepresentable {
     typealias PhotoPickedHandler = (UIImage) -> Void
     typealias DismissHandler = () -> Void
 
+    let cameraDevice: UIImagePickerController.CameraDevice
     let photoPicked: PhotoPickedHandler
     let dismiss: DismissHandler
+
+    init(cameraDevice: UIImagePickerController.CameraDevice = .rear, photoPicked: @escaping CameraView.PhotoPickedHandler, dismiss: @escaping CameraView.DismissHandler) {
+        self.cameraDevice = cameraDevice
+        self.photoPicked = photoPicked
+        self.dismiss = dismiss
+    }
 
     func makeUIViewController(context: Context) -> UIImagePickerController {
         let controller = UIImagePickerController()
         controller.sourceType = .camera
         controller.cameraCaptureMode = .photo
         controller.delegate = context.coordinator
-        controller.cameraDevice = .front
+        controller.cameraDevice = cameraDevice
         return controller
     }
 
-    func updateUIViewController(_ uiViewController: UIImagePickerController, context: Context) {
+    func updateUIViewController(_ controller: UIImagePickerController, context: Context) {
     }
 
     func makeCoordinator() -> Coordinator {
@@ -40,7 +48,7 @@ struct CameraView: UIViewControllerRepresentable {
             self.dismissHandler = dismissHandler
         }
 
-        func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [UIImagePickerController.InfoKey : Any]) {
+        func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [UIImagePickerController.InfoKey: Any]) {
             if let image = info[.originalImage] as? UIImage {
                 photoPickedHandler(image)
             } else {
