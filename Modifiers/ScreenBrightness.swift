@@ -9,17 +9,24 @@ import SwiftUI
 
 private struct ScreenBrightness: ViewModifier {
     let screen: UIScreen
-    let initialBrightness: CGFloat
     let duration: TimeInterval
     let ticksPerSecond: Double
+    let maxBrightness: CGFloat = 1.0
+
+    @State private var initialBrightness: CGFloat = UIScreen.main.brightness
 
     func body(content: Content) -> some View {
         content
             .onAppear {
-                screen.setBrightness(to: 1.0, duration: duration, ticksPerSecond: ticksPerSecond)
+                if initialBrightness < maxBrightness {
+                    initialBrightness = UIScreen.main.brightness
+                    screen.setBrightness(to: maxBrightness, duration: duration, ticksPerSecond: ticksPerSecond)
+                }
             }
             .onDisappear {
-                screen.setBrightness(to: initialBrightness, duration: duration, ticksPerSecond: ticksPerSecond)
+                if initialBrightness < maxBrightness {
+                    screen.setBrightness(to: initialBrightness, duration: duration, ticksPerSecond: ticksPerSecond)
+                }
             }
     }
 }
@@ -29,7 +36,7 @@ extension View {
         duration: TimeInterval = 0.3,
         ticksPerSecond: Int = UIScreen.main.maximumFramesPerSecond
     ) -> some View {
-        modifier(ScreenBrightness(screen: .main, initialBrightness: UIScreen.main.brightness, duration: duration, ticksPerSecond: Double(ticksPerSecond)))
+        modifier(ScreenBrightness(screen: .main, duration: duration, ticksPerSecond: Double(ticksPerSecond)))
     }
 }
 
