@@ -13,7 +13,7 @@ Almost all are compatible with iOS 14 and later. Many of these views and modifie
         * ImageViewer: View for zooming/panning a UIImage
         * QRCodeImage: Display a string/URL/data as a QR code
         * DocumentPicker: Wrapper for UIDocumentPickerViewController
-        * ShareSheet: Wrapper for UIActivityViewController (for using a share sheet when you can't use Apple's ShareLink view)
+        * LegacyShareLink: Wrapper for UIActivityViewController (for using a share sheet when you can't use Apple's ShareLink view)
         * SafariView: Wrapper for SFSafariViewController
     * Camera/photo
         * CameraView: Take a picture using the camera (full screen cover)
@@ -112,22 +112,13 @@ An image cropper view that wraps [RSKImageCropViewController](https://github.com
 
 ### Sheets
 
-#### ShareSheet
+#### LegacyShareLink
 
-A share sheet view that wraps `UIActivityViewController`.
+A share link view that wraps `UIActivityViewController`.
 
 ```swift
-struct ShareSheetView: View {
-    @State var presentShareSheet = false
-
-    var body: some View {
-        Button("Share sheet") {
-            presentShareSheet.toggle()
-        }
-        .sheet(isPresented: $presentShareSheet) {
-            ShareSheet(activityItems: [URL(string: "https://q42.com")!])
-        }
-    }
+LegacyShareLink("Share", item: URL(string: "https://q42.com")!) {
+    print("Share completion")
 }
 ```
 

@@ -27,7 +27,7 @@ struct ContentView: View {
 
                 Section {
                     NavigationLink("Safari sheet", destination: SafariSheetView())
-                    NavigationLink("Share sheet", destination: ShareSheetView())
+                    NavigationLink("Share sheet", destination: ShareLinkView())
                 } header: {
                     Text("Sheets")
                 }

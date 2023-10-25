@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 56;
+	objectVersion = 60;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -17,12 +17,12 @@
 		D53678582A07C8B50006FAF0 /* DocumentPicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = D53678522A07C8B50006FAF0 /* DocumentPicker.swift */; };
 		D53678592A07C8B50006FAF0 /* ImageCropView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D53678532A07C8B50006FAF0 /* ImageCropView.swift */; };
 		D536785A2A07C8B50006FAF0 /* SafariView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D53678542A07C8B50006FAF0 /* SafariView.swift */; };
-		D536785B2A07C8B50006FAF0 /* ShareSheet.swift in Sources */ = {isa = PBXBuildFile; fileRef = D53678552A07C8B50006FAF0 /* ShareSheet.swift */; };
+		D536785B2A07C8B50006FAF0 /* LegacyShareLink.swift in Sources */ = {isa = PBXBuildFile; fileRef = D53678552A07C8B50006FAF0 /* LegacyShareLink.swift */; };
 		D536785E2A07CC440006FAF0 /* ReadableContentWidthView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D536785D2A07CC440006FAF0 /* ReadableContentWidthView.swift */; };
 		D53678602A07CCA30006FAF0 /* RoundedRectangleCornersView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D536785F2A07CCA30006FAF0 /* RoundedRectangleCornersView.swift */; };
 		D536786D2A07D4BD0006FAF0 /* PhotoPickerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D536786C2A07D4BD0006FAF0 /* PhotoPickerView.swift */; };
 		D536786F2A07D4CE0006FAF0 /* DocumentPickerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D536786E2A07D4CE0006FAF0 /* DocumentPickerView.swift */; };
-		D53678712A07D4D30006FAF0 /* ShareSheetView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D53678702A07D4D30006FAF0 /* ShareSheetView.swift */; };
+		D53678712A07D4D30006FAF0 /* ShareLinkView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D53678702A07D4D30006FAF0 /* ShareLinkView.swift */; };
 		D53678732A07D4F10006FAF0 /* SafariSheetView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D53678722A07D4F10006FAF0 /* SafariSheetView.swift */; };
 		D5435C6D2A544BCA0061A2BC /* QRCodeImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5435C6C2A544BCA0061A2BC /* QRCodeImage.swift */; };
 		D5435C6F2A544CC40061A2BC /* QRCodeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5435C6E2A544CC40061A2BC /* QRCodeView.swift */; };
@@ -50,13 +50,13 @@
 		D53678522A07C8B50006FAF0 /* DocumentPicker.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DocumentPicker.swift; sourceTree = "<group>"; };
 		D53678532A07C8B50006FAF0 /* ImageCropView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ImageCropView.swift; sourceTree = "<group>"; };
 		D53678542A07C8B50006FAF0 /* SafariView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SafariView.swift; sourceTree = "<group>"; };
-		D53678552A07C8B50006FAF0 /* ShareSheet.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ShareSheet.swift; sourceTree = "<group>"; };
+		D53678552A07C8B50006FAF0 /* LegacyShareLink.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LegacyShareLink.swift; sourceTree = "<group>"; };
 		D536785D2A07CC440006FAF0 /* ReadableContentWidthView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReadableContentWidthView.swift; sourceTree = "<group>"; };
 		D536785F2A07CCA30006FAF0 /* RoundedRectangleCornersView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoundedRectangleCornersView.swift; sourceTree = "<group>"; };
 		D536786B2A07D2000006FAF0 /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 		D536786C2A07D4BD0006FAF0 /* PhotoPickerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoPickerView.swift; sourceTree = "<group>"; };
 		D536786E2A07D4CE0006FAF0 /* DocumentPickerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DocumentPickerView.swift; sourceTree = "<group>"; };
-		D53678702A07D4D30006FAF0 /* ShareSheetView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShareSheetView.swift; sourceTree = "<group>"; };
+		D53678702A07D4D30006FAF0 /* ShareLinkView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShareLinkView.swift; sourceTree = "<group>"; };
 		D53678722A07D4F10006FAF0 /* SafariSheetView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SafariSheetView.swift; sourceTree = "<group>"; };
 		D5435C6C2A544BCA0061A2BC /* QRCodeImage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QRCodeImage.swift; sourceTree = "<group>"; };
 		D5435C6E2A544CC40061A2BC /* QRCodeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QRCodeView.swift; sourceTree = "<group>"; };
@@ -151,7 +151,7 @@
 			children = (
 				D53678532A07C8B50006FAF0 /* ImageCropView.swift */,
 				D53678542A07C8B50006FAF0 /* SafariView.swift */,
-				D53678552A07C8B50006FAF0 /* ShareSheet.swift */,
+				D53678552A07C8B50006FAF0 /* LegacyShareLink.swift */,
 				D53678522A07C8B50006FAF0 /* DocumentPicker.swift */,
 				D53678512A07C8B50006FAF0 /* PhotoPicker.swift */,
 				D5A448892A1E359E0059C4A3 /* CameraView.swift */,
@@ -169,7 +169,7 @@
 				D536786C2A07D4BD0006FAF0 /* PhotoPickerView.swift */,
 				D53678722A07D4F10006FAF0 /* SafariSheetView.swift */,
 				D536786E2A07D4CE0006FAF0 /* DocumentPickerView.swift */,
-				D53678702A07D4D30006FAF0 /* ShareSheetView.swift */,
+				D53678702A07D4D30006FAF0 /* ShareLinkView.swift */,
 				D562A5CA2A39BD62009D62C4 /* DeviceShakeView.swift */,
 				D562A5D12A39C172009D62C4 /* CameraDemoView.swift */,
 				D5435C6E2A544CC40061A2BC /* QRCodeView.swift */,
@@ -206,7 +206,7 @@
 			attributes = {
 				BuildIndependentTargetsInParallel = 1;
 				LastSwiftUpdateCheck = 1430;
-				LastUpgradeCheck = 1430;
+				LastUpgradeCheck = 1500;
 				TargetAttributes = {
 					D53678382A07C75C0006FAF0 = {
 						CreatedOnToolsVersion = 14.3;
@@ -214,7 +214,7 @@
 				};
 			};
 			buildConfigurationList = D53678342A07C75C0006FAF0 /* Build configuration list for PBXProject "SwiftUILibrary" */;
-			compatibilityVersion = "Xcode 14.0";
+			compatibilityVersion = "Xcode 15.0";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
 			knownRegions = (
@@ -254,13 +254,13 @@
 				D5435C712A54552C0061A2BC /* ScreenBrightness.swift in Sources */,
 				D53678602A07CCA30006FAF0 /* RoundedRectangleCornersView.swift in Sources */,
 				D5435C6D2A544BCA0061A2BC /* QRCodeImage.swift in Sources */,
-				D536785B2A07C8B50006FAF0 /* ShareSheet.swift in Sources */,
+				D536785B2A07C8B50006FAF0 /* LegacyShareLink.swift in Sources */,
 				D536785A2A07C8B50006FAF0 /* SafariView.swift in Sources */,
 				D578FE342A3AF24500CC6E6B /* ImageViewerView.swift in Sources */,
 				D578FE322A3AF24000CC6E6B /* ImageViewer.swift in Sources */,
 				D536783F2A07C75C0006FAF0 /* ContentView.swift in Sources */,
 				D53678572A07C8B50006FAF0 /* PhotoPicker.swift in Sources */,
-				D53678712A07D4D30006FAF0 /* ShareSheetView.swift in Sources */,
+				D53678712A07D4D30006FAF0 /* ShareLinkView.swift in Sources */,
 				D536786F2A07D4CE0006FAF0 /* DocumentPickerView.swift in Sources */,
 				D53678592A07C8B50006FAF0 /* ImageCropView.swift in Sources */,
 				D536786D2A07D4BD0006FAF0 /* PhotoPickerView.swift in Sources */,
@@ -285,6 +285,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
@@ -317,6 +318,7 @@
 				DEBUG_INFORMATION_FORMAT = dwarf;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				ENABLE_TESTABILITY = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu11;
 				GCC_DYNAMIC_NO_PIC = NO;
 				GCC_NO_COMMON_BLOCKS = YES;
@@ -345,6 +347,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
@@ -377,6 +380,7 @@
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				ENABLE_NS_ASSERTIONS = NO;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu11;
 				GCC_NO_COMMON_BLOCKS = YES;
 				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
