@@ -69,8 +69,21 @@ class ImageViewerController: UIViewController, UIScrollViewDelegate {
                 let request = URLRequest(url: url)
                 let (data, _) = try await URLSession.shared.data(for: request)
                 self.imageView.image = UIImage(data: data)
-            } catch {}
+            } catch {
+                self.previousURL = nil
+                self.showLoadingFailedAlert(for: url, error: error)
+            }
         }
+    }
+
+    private func showLoadingFailedAlert(for url: URL, error: Error) {
+        let title = NSLocalizedString("Afbeelding kon niet worden geladen", comment: "Image viewer")
+        let alertController = UIAlertController(title: title, message: error.localizedDescription, preferredStyle: .alert)
+        alertController.addAction(UIAlertAction(title: NSLocalizedString("Probeer opnieuw", comment: "Image viewer"), style: .default) { _ in
+            self.setURL(url)
+        })
+        alertController.addAction(UIAlertAction(title: NSLocalizedString("Annuleren", comment: "Image viewer"), style: .cancel))
+        present(alertController, animated: true)
     }
 
     override func viewDidLoad() {
@@ -109,7 +122,7 @@ class ImageViewerController: UIViewController, UIScrollViewDelegate {
         resetZoom(animated: false)
     }
 
-    @objc private func toggleZoom(_ sender: UITapGestureRecognizer) {
+    @objc private func toggleZoom() {
         if scrollView.zoomScale == scrollView.minimumZoomScale {
           scrollView.setZoomScale(scrollView.maximumZoomScale / 2, animated: true)
         } else {
@@ -129,14 +142,20 @@ class ImageViewerController: UIViewController, UIScrollViewDelegate {
         guard let image = imageView.image, sender.state == .began else { return }
         let activityController = UIActivityViewController(activityItems: [image], applicationActivities: nil)
         activityController.popoverPresentationController?.sourceView = imageView
-        activityController.popoverPresentationController?.sourceRect = CGRect(origin: sender.location(in: imageView), size: CGSize(width: 44, height: 44))
+        activityController.popoverPresentationController?.sourceRect = CGRect(
+            origin: sender.location(in: imageView),
+            size: CGSize(width: 44, height: 44)
+        )
         present(activityController, animated: true)
     }
 }
 
-struct ImageViewer_Previews: PreviewProvider {
-    static var previews: some View {
-        ImageViewer(image: UIImage(named: "Logo"))
-            .ignoresSafeArea()
-    }
+#Preview("Image viewer with image") {
+    ImageViewer(image: UIImage(named: "demoImage"))
+        .ignoresSafeArea()
+}
+
+#Preview("Image viewer with URL") {
+    ImageViewer(url: URL(string: "https://placekitten.com/1024/1024"))
+        .ignoresSafeArea()
 }
