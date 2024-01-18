@@ -40,6 +40,7 @@ struct ContentView: View {
 
                 Section {
                     NavigationLink("QR code view", destination: QRCodeView())
+                    NavigationLink("Grid stack", destination: GridStackView())
                 } header: {
                     Text("Views")
                 }
