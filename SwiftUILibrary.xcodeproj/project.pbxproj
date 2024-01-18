@@ -87,7 +87,9 @@
 			isa = PBXGroup;
 			children = (
 				D536786B2A07D2000006FAF0 /* README.md */,
+				D5DED4B32B59280B00AADEB3 /* Components */,
 				D536784A2A07C7C70006FAF0 /* Modifiers */,
+				D5DED4B42B59281A00AADEB3 /* Pickers */,
 				D536784D2A07C7C70006FAF0 /* Views */,
 				D536783B2A07C75C0006FAF0 /* SampleApp */,
 				D536783A2A07C75C0006FAF0 /* Products */,
@@ -151,9 +153,6 @@
 			children = (
 				D53678532A07C8B50006FAF0 /* ImageCropView.swift */,
 				D53678542A07C8B50006FAF0 /* SafariView.swift */,
-				D53678552A07C8B50006FAF0 /* LegacyShareLink.swift */,
-				D53678522A07C8B50006FAF0 /* DocumentPicker.swift */,
-				D53678512A07C8B50006FAF0 /* PhotoPicker.swift */,
 				D5A448892A1E359E0059C4A3 /* CameraView.swift */,
 				D5C76ACE2A61AEBA00B7469C /* MailComposeView.swift */,
 			);
@@ -176,6 +175,23 @@
 				D5C76AD02A61AEF500B7469C /* MailDemoView.swift */,
 			);
 			path = Demos;
+			sourceTree = "<group>";
+		};
+		D5DED4B32B59280B00AADEB3 /* Components */ = {
+			isa = PBXGroup;
+			children = (
+				D53678552A07C8B50006FAF0 /* LegacyShareLink.swift */,
+			);
+			path = Components;
+			sourceTree = "<group>";
+		};
+		D5DED4B42B59281A00AADEB3 /* Pickers */ = {
+			isa = PBXGroup;
+			children = (
+				D53678522A07C8B50006FAF0 /* DocumentPicker.swift */,
+				D53678512A07C8B50006FAF0 /* PhotoPicker.swift */,
+			);
+			path = Pickers;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
