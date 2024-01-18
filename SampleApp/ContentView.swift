@@ -12,6 +12,13 @@ struct ContentView: View {
         NavigationView {
             List {
                 Section {
+                    NavigationLink("In app browser link", destination: InAppBrowserLinkView())
+                    NavigationLink("Share link", destination: ShareLinkView())
+                } header: {
+                    Text("Components")
+                }
+
+                Section {
                     NavigationLink("Document picker", destination: DocumentPickerView())
                     NavigationLink("Photo picker", destination: PhotoPickerView())
                 } header: {
@@ -27,7 +34,6 @@ struct ContentView: View {
 
                 Section {
                     NavigationLink("Safari sheet", destination: SafariSheetView())
-                    NavigationLink("Share sheet", destination: ShareLinkView())
                 } header: {
                     Text("Sheets")
                 }
