@@ -13,7 +13,7 @@ struct ImageViewer: UIViewControllerRepresentable {
     private let maximumZoomScale: CGFloat
     private let showsIndicators: Bool
 
-    enum Content {
+    private enum Content {
         case image(UIImage?)
         case url(URL?)
     }
@@ -50,10 +50,12 @@ struct ImageViewer: UIViewControllerRepresentable {
 class ImageViewerController: UIViewController, UIScrollViewDelegate {
     private let imageView = UIImageView()
     fileprivate let scrollView = UIScrollView()
+    private let progressView = UIActivityIndicatorView(style: .medium)
     private var previousURL: URL?
 
     func setImage(_ image: UIImage?) {
         imageView.image = image
+        progressView.stopAnimating()
         resetZoom(animated: false)
     }
 
@@ -64,16 +66,21 @@ class ImageViewerController: UIViewController, UIScrollViewDelegate {
         }
         guard url != previousURL else { return }
         previousURL = url
-        Task {
-            do {
-                let request = URLRequest(url: url)
-                let (data, _) = try await URLSession.shared.data(for: request)
-                self.imageView.image = UIImage(data: data)
-            } catch {
-                self.previousURL = nil
-                self.showLoadingFailedAlert(for: url, error: error)
+        var request = URLRequest(url: url)
+        request.cachePolicy = .reloadIgnoringLocalAndRemoteCacheData
+        let task = URLSession.shared.dataTask(with: request) { data, _, error in
+            DispatchQueue.main.async {
+                self.progressView.stopAnimating()
+                if let data {
+                    self.imageView.image = UIImage(data: data)
+                } else if let error {
+                    self.previousURL = nil
+                    self.showLoadingFailedAlert(for: url, error: error)
+                }
             }
         }
+        progressView.startAnimating()
+        task.resume()
     }
 
     private func showLoadingFailedAlert(for url: URL, error: Error) {
@@ -101,11 +108,16 @@ class ImageViewerController: UIViewController, UIScrollViewDelegate {
         scrollView.autoresizesSubviews = true
         scrollView.translatesAutoresizingMaskIntoConstraints = false
 
+        progressView.translatesAutoresizingMaskIntoConstraints = false
+        view.addSubview(progressView)
+
         NSLayoutConstraint.activate([
             scrollView.topAnchor.constraint(equalTo: view.topAnchor),
             scrollView.leadingAnchor.constraint(equalTo: view.leadingAnchor),
             scrollView.trailingAnchor.constraint(equalTo: view.trailingAnchor),
             scrollView.bottomAnchor.constraint(equalTo: view.bottomAnchor),
+            progressView.centerXAnchor.constraint(equalTo: view.centerXAnchor),
+            progressView.centerYAnchor.constraint(equalTo: view.centerYAnchor),
         ])
 
         // Add double tap to zoom gesture

@@ -9,7 +9,7 @@ import SwiftUI
 
 struct ImageViewerView: View {
     var body: some View {
-        ImageViewer(image: UIImage(named: "demoImage"))
+        ImageViewer(url: URL(string: "https://placekitten.com/1024/1024"))
             .ignoresSafeArea(edges: [.horizontal, .bottom])
             .navigationTitle("Image viewer")
             .navigationBarTitleDisplayMode(.inline)
