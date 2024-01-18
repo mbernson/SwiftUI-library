@@ -40,6 +40,8 @@
 		D5DED4BA2B59290800AADEB3 /* InAppBrowserLinkView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5DED4B92B59290800AADEB3 /* InAppBrowserLinkView.swift */; };
 		D5DED4BC2B592FD300AADEB3 /* GridStack.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5DED4BB2B592FD300AADEB3 /* GridStack.swift */; };
 		D5DED4BE2B59319800AADEB3 /* GridStackView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5DED4BD2B59319800AADEB3 /* GridStackView.swift */; };
+		D5DED4C22B596CED00AADEB3 /* QRCodeScanner.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5DED4C12B596CED00AADEB3 /* QRCodeScanner.swift */; };
+		D5DED4C42B596D2A00AADEB3 /* QRCodeScannerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5DED4C32B596D2A00AADEB3 /* QRCodeScannerView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -78,6 +80,8 @@
 		D5DED4B92B59290800AADEB3 /* InAppBrowserLinkView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InAppBrowserLinkView.swift; sourceTree = "<group>"; };
 		D5DED4BB2B592FD300AADEB3 /* GridStack.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GridStack.swift; sourceTree = "<group>"; };
 		D5DED4BD2B59319800AADEB3 /* GridStackView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GridStackView.swift; sourceTree = "<group>"; };
+		D5DED4C12B596CED00AADEB3 /* QRCodeScanner.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QRCodeScanner.swift; sourceTree = "<group>"; };
+		D5DED4C32B596D2A00AADEB3 /* QRCodeScannerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QRCodeScannerView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -152,6 +156,7 @@
 				D578FE312A3AF24000CC6E6B /* ImageViewer.swift */,
 				D536785C2A07C8C10006FAF0 /* Sheets */,
 				D5435C6C2A544BCA0061A2BC /* QRCodeImage.swift */,
+				D5DED4C12B596CED00AADEB3 /* QRCodeScanner.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -183,6 +188,7 @@
 				D5C76AD02A61AEF500B7469C /* MailDemoView.swift */,
 				D5DED4B92B59290800AADEB3 /* InAppBrowserLinkView.swift */,
 				D5DED4BD2B59319800AADEB3 /* GridStackView.swift */,
+				D5DED4C32B596D2A00AADEB3 /* QRCodeScannerView.swift */,
 			);
 			path = Demos;
 			sourceTree = "<group>";
@@ -298,9 +304,11 @@
 				D5A4488A2A1E359E0059C4A3 /* CameraView.swift in Sources */,
 				D5DED4BC2B592FD300AADEB3 /* GridStack.swift in Sources */,
 				D5DED4BE2B59319800AADEB3 /* GridStackView.swift in Sources */,
+				D5DED4C22B596CED00AADEB3 /* QRCodeScanner.swift in Sources */,
 				D5C76ACF2A61AEBA00B7469C /* MailComposeView.swift in Sources */,
 				D5C76AD12A61AEF500B7469C /* MailDemoView.swift in Sources */,
 				D53678582A07C8B50006FAF0 /* DocumentPicker.swift in Sources */,
+				D5DED4C42B596D2A00AADEB3 /* QRCodeScannerView.swift in Sources */,
 				D5DED4B82B5928B700AADEB3 /* InAppBrowserLink.swift in Sources */,
 				D5A448862A1E32600059C4A3 /* ErrorAlert.swift in Sources */,
 				D536783D2A07C75C0006FAF0 /* SwiftUILibraryApp.swift in Sources */,
@@ -442,6 +450,7 @@
 				DEVELOPMENT_TEAM = 3W68UU92K3;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_NSCameraUsageDescription = "To scan a QR code";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -471,6 +480,7 @@
 				DEVELOPMENT_TEAM = 3W68UU92K3;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_NSCameraUsageDescription = "To scan a QR code";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;

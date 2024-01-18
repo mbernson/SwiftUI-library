@@ -45,8 +45,13 @@ struct ContentView: View {
                     Text("Views")
                 }
 
-                if #available(iOS 15.0, *) {
-                    NavigationLink("Mail compose view", destination: MailDemoView())
+                Section {
+                    if #available(iOS 15.0, *) {
+                        NavigationLink("Mail compose view", destination: MailDemoView())
+                        NavigationLink("QR code scanner", destination: QRCodeScannerView())
+                    }
+                } header: {
+                    Text("Utility views")
                 }
 
                 Section {
