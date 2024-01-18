@@ -17,7 +17,7 @@ struct LegacyShareLink<Label: View>: View {
     // The `ShareLink` component has many different overloads. I haven't recreated them all.
     // Just add them as needed.
 
-    init(_ title: LocalizedStringKey, item: Any, message: String? = nil, completion: @escaping () -> Void) where Label == Text {
+    init(_ title: LocalizedStringKey, item: Any, message: String? = nil, completion: @escaping () -> Void = {}) where Label == Text {
         self.label = { Text(title) }
         if let message {
             self.activityItems = [message, item]
@@ -27,7 +27,7 @@ struct LegacyShareLink<Label: View>: View {
         self.completion = completion
     }
 
-    init(item: Any, label: @escaping () -> Label, message: String? = nil, completion: @escaping () -> Void) {
+    init(item: Any, @ViewBuilder label: @escaping () -> Label, message: String? = nil, completion: @escaping () -> Void = {}) {
         self.label = label
         if let message {
             self.activityItems = [message, item]
@@ -60,18 +60,79 @@ private struct LegacyShareSheetAnchor: UIViewControllerRepresentable {
 
     func updateUIViewController(_ viewController: LegacyShareSheetAnchorController, context: Context) {
         if isPresented, viewController.presentedViewController == nil {
-            let activityController = UIActivityViewController(activityItems: activityItems, applicationActivities: nil)
-            activityController.popoverPresentationController?.sourceView = viewController.view
-            activityController.completionWithItemsHandler = { activityType, completed, returnedItems, error in
-                isPresented = false
-                completion(completed)
-            }
+            let activityController = makeActivityController(presentingViewController: viewController)
             viewController.present(activityController, animated: true)
         }
+    }
+
+    func makeActivityController(presentingViewController: UIViewController) -> UIActivityViewController {
+        let copyLinkActivity = CopyLinkActivity()
+        let activityController = UIActivityViewController(
+            activityItems: activityItems,
+            applicationActivities: [copyLinkActivity]
+        )
+        activityController.excludedActivityTypes = [
+            .addToReadingList,
+            .openInIBooks,
+            .print,
+            .assignToContact,
+            .markupAsPDF,
+        ]
+
+        let hasCopyLink = copyLinkActivity.canPerform(withActivityItems: activityItems)
+        if hasCopyLink {
+            activityController.excludedActivityTypes?.append(.copyToPasteboard)
+        }
+
+        activityController.popoverPresentationController?.sourceView = presentingViewController.view
+        activityController.completionWithItemsHandler = { activityType, completed, returnedItems, error in
+            isPresented = false
+            completion(completed)
+        }
+        return activityController
     }
 }
 
 private typealias LegacyShareSheetAnchorController = UIViewController
+
+private class CopyLinkActivity: UIActivity {
+    private var url: URL?
+
+    override var activityType: UIActivity.ActivityType? {
+        return UIActivity.ActivityType(rawValue: "\(Bundle.main.bundleIdentifier!).CopyLink")
+    }
+
+    override var activityTitle: String? {
+        return NSLocalizedString("Copy link", comment: "Share sheet button")
+    }
+
+    override var activityImage: UIImage? {
+        return UIImage(systemName: "doc.on.doc")
+    }
+
+    override func canPerform(withActivityItems activityItems: [Any]) -> Bool {
+        for activityItem in activityItems {
+            if activityItem as? URL != nil {
+                return true
+            }
+        }
+
+        return false
+    }
+
+    override func prepare(withActivityItems activityItems: [Any]) {
+        for activityItem in activityItems {
+            if let url = activityItem as? URL {
+                self.url = url
+            }
+        }
+    }
+
+    override func perform() {
+        UIPasteboard.general.string = url?.absoluteString
+        activityDidFinish(true)
+    }
+}
 
 #Preview("Legacy share link") {
     LegacyShareLink("Deel link", item: URL(string: "https://q42.nl/")!, message: "Q42 website", completion: {
