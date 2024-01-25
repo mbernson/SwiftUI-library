@@ -10,9 +10,21 @@ import AVFoundation
 import UIKit
 
 /// A view that displays a camera feed, that scans for a QR code.
-/// The `action` callback will be called once, the first time a code is scanned.
 struct QRCodeScanner: UIViewControllerRepresentable {
+    let mode: Mode
     let action: (String) -> Void
+
+    init(mode: Mode = .once, action: @escaping (String) -> Void) {
+        self.mode = mode
+        self.action = action
+    }
+
+    enum Mode {
+        /// Scan until one code is found, then stop giving new results.
+        case once
+        /// Scan continuously, returning every code that is succesfully scanned.
+        case continuous
+    }
 
     func makeUIViewController(context: Context) -> QRCodeScannerViewController {
         let controller = QRCodeScannerViewController(codeTypes: [.qr])
@@ -22,25 +34,34 @@ struct QRCodeScanner: UIViewControllerRepresentable {
 
     func updateUIViewController(_ controller: QRCodeScannerViewController, context: Context) {
         controller.delegate = context.coordinator
-        context.coordinator.resultHandler = { code in
-            action(code)
-        }
+        context.coordinator.mode = mode
+        context.coordinator.resultHandler = action
     }
 
     func makeCoordinator() -> QRCodeScannerDelegate {
-        QRCodeScannerDelegate()
+        QRCodeScannerDelegate(mode: mode)
     }
 }
 
 class QRCodeScannerDelegate: NSObject, AVCaptureMetadataOutputObjectsDelegate {
     var resultHandler: ((String) -> Void)?
-    private var didScanCode = false
+    var scannedCodes = Set<String>()
+    var mode: QRCodeScanner.Mode
+
+    init(mode: QRCodeScanner.Mode) {
+        self.mode = mode
+        super.init()
+    }
 
     func metadataOutput(_ output: AVCaptureMetadataOutput, didOutput metadataObjects: [AVMetadataObject], from connection: AVCaptureConnection) {
         guard let readableObject = metadataObjects.first as? AVMetadataMachineReadableCodeObject,
               let code = readableObject.stringValue,
-              !didScanCode else { return }
-        didScanCode = true
+              !scannedCodes.contains(code) else { return }
+        
+        scannedCodes.insert(code)
+        if mode == .once && !scannedCodes.isEmpty {
+            return
+        }
         resultHandler?(code)
     }
 }
