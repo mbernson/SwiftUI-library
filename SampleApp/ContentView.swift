@@ -22,6 +22,7 @@ struct ContentView: View {
                 }
 
                 Section {
+                    NavigationLink("Radio button picker", destination: PickerDemoView())
                     NavigationLink("Document picker", destination: DocumentPickerView())
                     NavigationLink("Photo picker", destination: PhotoPickerView())
                 } header: {
