@@ -63,6 +63,10 @@ struct ContentView: View {
                     NavigationLink("Rounded rectangle corners", destination: RoundedRectangleCornersView())
                     NavigationLink("Device shake", destination: DeviceShakeView())
                     NavigationLink("Screen brightness", destination: QRCodeView())
+
+                    if #available(iOS 16.0, *) {
+                        NavigationLink("Navigation destination", destination: NavigationDestinationView())
+                    }
                 } header: {
                     Text("Modifiers")
                 }
