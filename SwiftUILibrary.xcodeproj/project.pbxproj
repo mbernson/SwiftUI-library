@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		D51464AC2B8F3A12004815D4 /* NavigationDestination.swift in Sources */ = {isa = PBXBuildFile; fileRef = D51464AB2B8F3A12004815D4 /* NavigationDestination.swift */; };
+		D51464AE2B8F3A4F004815D4 /* NavigationDestinationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D51464AD2B8F3A4F004815D4 /* NavigationDestinationView.swift */; };
 		D536783D2A07C75C0006FAF0 /* SwiftUILibraryApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = D536783C2A07C75C0006FAF0 /* SwiftUILibraryApp.swift */; };
 		D536783F2A07C75C0006FAF0 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D536783E2A07C75C0006FAF0 /* ContentView.swift */; };
 		D53678412A07C75D0006FAF0 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D53678402A07C75D0006FAF0 /* Assets.xcassets */; };
@@ -47,6 +49,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		D51464AB2B8F3A12004815D4 /* NavigationDestination.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigationDestination.swift; sourceTree = "<group>"; };
+		D51464AD2B8F3A4F004815D4 /* NavigationDestinationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigationDestinationView.swift; sourceTree = "<group>"; };
 		D53678392A07C75C0006FAF0 /* SwiftUILibrary.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SwiftUILibrary.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D536783C2A07C75C0006FAF0 /* SwiftUILibraryApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwiftUILibraryApp.swift; sourceTree = "<group>"; };
 		D536783E2A07C75C0006FAF0 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -194,6 +198,7 @@
 				D5DED4BD2B59319800AADEB3 /* GridStackView.swift */,
 				D5DED4C32B596D2A00AADEB3 /* QRCodeScannerView.swift */,
 				D575F7FD2B7E577600EA065F /* CodeVerificationView.swift */,
+				D51464AD2B8F3A4F004815D4 /* NavigationDestinationView.swift */,
 			);
 			path = Demos;
 			sourceTree = "<group>";
@@ -205,6 +210,7 @@
 				D53678552A07C8B50006FAF0 /* LegacyShareLink.swift */,
 				D5DED4B72B5928B700AADEB3 /* InAppBrowserLink.swift */,
 				D5DED4BB2B592FD300AADEB3 /* GridStack.swift */,
+				D51464AB2B8F3A12004815D4 /* NavigationDestination.swift */,
 			);
 			path = Components;
 			sourceTree = "<group>";
@@ -304,6 +310,7 @@
 				D53678572A07C8B50006FAF0 /* PhotoPicker.swift in Sources */,
 				D53678712A07D4D30006FAF0 /* ShareLinkView.swift in Sources */,
 				D536786F2A07D4CE0006FAF0 /* DocumentPickerView.swift in Sources */,
+				D51464AC2B8F3A12004815D4 /* NavigationDestination.swift in Sources */,
 				D53678592A07C8B50006FAF0 /* ImageCropView.swift in Sources */,
 				D536786D2A07D4BD0006FAF0 /* PhotoPickerView.swift in Sources */,
 				D536784F2A07C7C70006FAF0 /* RoundedRectangleCorners.swift in Sources */,
@@ -319,6 +326,7 @@
 				D5DED4C42B596D2A00AADEB3 /* QRCodeScannerView.swift in Sources */,
 				D5DED4B82B5928B700AADEB3 /* InAppBrowserLink.swift in Sources */,
 				D5A448862A1E32600059C4A3 /* ErrorAlert.swift in Sources */,
+				D51464AE2B8F3A4F004815D4 /* NavigationDestinationView.swift in Sources */,
 				D536783D2A07C75C0006FAF0 /* SwiftUILibraryApp.swift in Sources */,
 				D562A5CB2A39BD62009D62C4 /* DeviceShakeView.swift in Sources */,
 				D536785E2A07CC440006FAF0 /* ReadableContentWidthView.swift in Sources */,
