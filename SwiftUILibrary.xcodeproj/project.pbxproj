@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		D51464A82B8F2D94004815D4 /* PickerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D51464A72B8F2D94004815D4 /* PickerView.swift */; };
+		D51464AA2B8F2DDE004815D4 /* PickerDemoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D51464A92B8F2DDE004815D4 /* PickerDemoView.swift */; };
 		D536783D2A07C75C0006FAF0 /* SwiftUILibraryApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = D536783C2A07C75C0006FAF0 /* SwiftUILibraryApp.swift */; };
 		D536783F2A07C75C0006FAF0 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D536783E2A07C75C0006FAF0 /* ContentView.swift */; };
 		D53678412A07C75D0006FAF0 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D53678402A07C75D0006FAF0 /* Assets.xcassets */; };
@@ -47,6 +49,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		D51464A72B8F2D94004815D4 /* PickerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PickerView.swift; sourceTree = "<group>"; };
+		D51464A92B8F2DDE004815D4 /* PickerDemoView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PickerDemoView.swift; sourceTree = "<group>"; };
 		D53678392A07C75C0006FAF0 /* SwiftUILibrary.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SwiftUILibrary.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D536783C2A07C75C0006FAF0 /* SwiftUILibraryApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwiftUILibraryApp.swift; sourceTree = "<group>"; };
 		D536783E2A07C75C0006FAF0 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -179,21 +183,22 @@
 		D562A5CC2A39BD6C009D62C4 /* Demos */ = {
 			isa = PBXGroup;
 			children = (
-				D578FE332A3AF24500CC6E6B /* ImageViewerView.swift */,
-				D536785F2A07CCA30006FAF0 /* RoundedRectangleCornersView.swift */,
-				D536785D2A07CC440006FAF0 /* ReadableContentWidthView.swift */,
-				D536786C2A07D4BD0006FAF0 /* PhotoPickerView.swift */,
-				D53678722A07D4F10006FAF0 /* SafariSheetView.swift */,
-				D536786E2A07D4CE0006FAF0 /* DocumentPickerView.swift */,
-				D53678702A07D4D30006FAF0 /* ShareLinkView.swift */,
-				D562A5CA2A39BD62009D62C4 /* DeviceShakeView.swift */,
 				D562A5D12A39C172009D62C4 /* CameraDemoView.swift */,
-				D5435C6E2A544CC40061A2BC /* QRCodeView.swift */,
-				D5C76AD02A61AEF500B7469C /* MailDemoView.swift */,
-				D5DED4B92B59290800AADEB3 /* InAppBrowserLinkView.swift */,
-				D5DED4BD2B59319800AADEB3 /* GridStackView.swift */,
-				D5DED4C32B596D2A00AADEB3 /* QRCodeScannerView.swift */,
 				D575F7FD2B7E577600EA065F /* CodeVerificationView.swift */,
+				D562A5CA2A39BD62009D62C4 /* DeviceShakeView.swift */,
+				D536786E2A07D4CE0006FAF0 /* DocumentPickerView.swift */,
+				D5DED4BD2B59319800AADEB3 /* GridStackView.swift */,
+				D578FE332A3AF24500CC6E6B /* ImageViewerView.swift */,
+				D5DED4B92B59290800AADEB3 /* InAppBrowserLinkView.swift */,
+				D5C76AD02A61AEF500B7469C /* MailDemoView.swift */,
+				D536786C2A07D4BD0006FAF0 /* PhotoPickerView.swift */,
+				D51464A92B8F2DDE004815D4 /* PickerDemoView.swift */,
+				D5DED4C32B596D2A00AADEB3 /* QRCodeScannerView.swift */,
+				D5435C6E2A544CC40061A2BC /* QRCodeView.swift */,
+				D536785D2A07CC440006FAF0 /* ReadableContentWidthView.swift */,
+				D536785F2A07CCA30006FAF0 /* RoundedRectangleCornersView.swift */,
+				D53678722A07D4F10006FAF0 /* SafariSheetView.swift */,
+				D53678702A07D4D30006FAF0 /* ShareLinkView.swift */,
 			);
 			path = Demos;
 			sourceTree = "<group>";
@@ -214,6 +219,7 @@
 			children = (
 				D53678522A07C8B50006FAF0 /* DocumentPicker.swift */,
 				D53678512A07C8B50006FAF0 /* PhotoPicker.swift */,
+				D51464A72B8F2D94004815D4 /* PickerView.swift */,
 			);
 			path = Pickers;
 			sourceTree = "<group>";
@@ -308,6 +314,7 @@
 				D536786D2A07D4BD0006FAF0 /* PhotoPickerView.swift in Sources */,
 				D536784F2A07C7C70006FAF0 /* RoundedRectangleCorners.swift in Sources */,
 				D5435C6F2A544CC40061A2BC /* QRCodeView.swift in Sources */,
+				D51464A82B8F2D94004815D4 /* PickerView.swift in Sources */,
 				D53678732A07D4F10006FAF0 /* SafariSheetView.swift in Sources */,
 				D5A4488A2A1E359E0059C4A3 /* CameraView.swift in Sources */,
 				D5DED4BC2B592FD300AADEB3 /* GridStack.swift in Sources */,
@@ -322,6 +329,7 @@
 				D536783D2A07C75C0006FAF0 /* SwiftUILibraryApp.swift in Sources */,
 				D562A5CB2A39BD62009D62C4 /* DeviceShakeView.swift in Sources */,
 				D536785E2A07CC440006FAF0 /* ReadableContentWidthView.swift in Sources */,
+				D51464AA2B8F2DDE004815D4 /* PickerDemoView.swift in Sources */,
 				D5DED4BA2B59290800AADEB3 /* InAppBrowserLinkView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
