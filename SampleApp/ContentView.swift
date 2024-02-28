@@ -16,6 +16,7 @@ struct ContentView: View {
                     NavigationLink("Share link", destination: ShareLinkView())
                     if #available(iOS 15.0, *) {
                         NavigationLink("Code verification field", destination: CodeVerificationView())
+                        NavigationLink("Print button", destination: PrintButtonView())
                     }
                 } header: {
                     Text("Components")
