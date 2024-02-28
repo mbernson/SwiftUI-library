@@ -24,6 +24,11 @@
 		D536786F2A07D4CE0006FAF0 /* DocumentPickerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D536786E2A07D4CE0006FAF0 /* DocumentPickerView.swift */; };
 		D53678712A07D4D30006FAF0 /* ShareLinkView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D53678702A07D4D30006FAF0 /* ShareLinkView.swift */; };
 		D53678732A07D4F10006FAF0 /* SafariSheetView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D53678722A07D4F10006FAF0 /* SafariSheetView.swift */; };
+		D53FC7FA2B8F7CE1001753BA /* PDFViewer.swift in Sources */ = {isa = PBXBuildFile; fileRef = D53FC7F92B8F7CE1001753BA /* PDFViewer.swift */; };
+		D53FC7FC2B8F7CE4001753BA /* PDFImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = D53FC7FB2B8F7CE4001753BA /* PDFImage.swift */; };
+		D53FC7FE2B8F7D32001753BA /* sample.pdf in Resources */ = {isa = PBXBuildFile; fileRef = D53FC7FD2B8F7D32001753BA /* sample.pdf */; };
+		D53FC8002B8F7D70001753BA /* PDFViewerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D53FC7FF2B8F7D70001753BA /* PDFViewerView.swift */; };
+		D53FC8022B8F7D76001753BA /* PDFImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D53FC8012B8F7D76001753BA /* PDFImageView.swift */; };
 		D5435C6D2A544BCA0061A2BC /* QRCodeImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5435C6C2A544BCA0061A2BC /* QRCodeImage.swift */; };
 		D5435C6F2A544CC40061A2BC /* QRCodeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5435C6E2A544CC40061A2BC /* QRCodeView.swift */; };
 		D5435C712A54552C0061A2BC /* ScreenBrightness.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5435C702A54552C0061A2BC /* ScreenBrightness.swift */; };
@@ -66,6 +71,11 @@
 		D536786E2A07D4CE0006FAF0 /* DocumentPickerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DocumentPickerView.swift; sourceTree = "<group>"; };
 		D53678702A07D4D30006FAF0 /* ShareLinkView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShareLinkView.swift; sourceTree = "<group>"; };
 		D53678722A07D4F10006FAF0 /* SafariSheetView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SafariSheetView.swift; sourceTree = "<group>"; };
+		D53FC7F92B8F7CE1001753BA /* PDFViewer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PDFViewer.swift; sourceTree = "<group>"; };
+		D53FC7FB2B8F7CE4001753BA /* PDFImage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PDFImage.swift; sourceTree = "<group>"; };
+		D53FC7FD2B8F7D32001753BA /* sample.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; path = sample.pdf; sourceTree = "<group>"; };
+		D53FC7FF2B8F7D70001753BA /* PDFViewerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PDFViewerView.swift; sourceTree = "<group>"; };
+		D53FC8012B8F7D76001753BA /* PDFImageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PDFImageView.swift; sourceTree = "<group>"; };
 		D5435C6C2A544BCA0061A2BC /* QRCodeImage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QRCodeImage.swift; sourceTree = "<group>"; };
 		D5435C6E2A544CC40061A2BC /* QRCodeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QRCodeView.swift; sourceTree = "<group>"; };
 		D5435C702A54552C0061A2BC /* ScreenBrightness.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScreenBrightness.swift; sourceTree = "<group>"; };
@@ -137,6 +147,7 @@
 		D53678422A07C75D0006FAF0 /* Preview Content */ = {
 			isa = PBXGroup;
 			children = (
+				D53FC7FD2B8F7D32001753BA /* sample.pdf */,
 				D53678432A07C75D0006FAF0 /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
@@ -161,6 +172,8 @@
 				D536785C2A07C8C10006FAF0 /* Sheets */,
 				D5435C6C2A544BCA0061A2BC /* QRCodeImage.swift */,
 				D5DED4C12B596CED00AADEB3 /* QRCodeScanner.swift */,
+				D53FC7F92B8F7CE1001753BA /* PDFViewer.swift */,
+				D53FC7FB2B8F7CE4001753BA /* PDFImage.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -194,6 +207,8 @@
 				D5DED4BD2B59319800AADEB3 /* GridStackView.swift */,
 				D5DED4C32B596D2A00AADEB3 /* QRCodeScannerView.swift */,
 				D575F7FD2B7E577600EA065F /* CodeVerificationView.swift */,
+				D53FC7FF2B8F7D70001753BA /* PDFViewerView.swift */,
+				D53FC8012B8F7D76001753BA /* PDFImageView.swift */,
 			);
 			path = Demos;
 			sourceTree = "<group>";
@@ -278,6 +293,7 @@
 			files = (
 				D53678442A07C75D0006FAF0 /* Preview Assets.xcassets in Resources */,
 				D53678412A07C75D0006FAF0 /* Assets.xcassets in Resources */,
+				D53FC7FE2B8F7D32001753BA /* sample.pdf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -296,12 +312,15 @@
 				D5435C6D2A544BCA0061A2BC /* QRCodeImage.swift in Sources */,
 				D575F7FC2B7E570600EA065F /* CodeVerificationField.swift in Sources */,
 				D536785B2A07C8B50006FAF0 /* LegacyShareLink.swift in Sources */,
+				D53FC7FC2B8F7CE4001753BA /* PDFImage.swift in Sources */,
+				D53FC8022B8F7D76001753BA /* PDFImageView.swift in Sources */,
 				D536785A2A07C8B50006FAF0 /* SafariView.swift in Sources */,
 				D575F7FE2B7E577600EA065F /* CodeVerificationView.swift in Sources */,
 				D578FE342A3AF24500CC6E6B /* ImageViewerView.swift in Sources */,
 				D578FE322A3AF24000CC6E6B /* ImageViewer.swift in Sources */,
 				D536783F2A07C75C0006FAF0 /* ContentView.swift in Sources */,
 				D53678572A07C8B50006FAF0 /* PhotoPicker.swift in Sources */,
+				D53FC8002B8F7D70001753BA /* PDFViewerView.swift in Sources */,
 				D53678712A07D4D30006FAF0 /* ShareLinkView.swift in Sources */,
 				D536786F2A07D4CE0006FAF0 /* DocumentPickerView.swift in Sources */,
 				D53678592A07C8B50006FAF0 /* ImageCropView.swift in Sources */,
@@ -314,6 +333,7 @@
 				D5DED4BE2B59319800AADEB3 /* GridStackView.swift in Sources */,
 				D5DED4C22B596CED00AADEB3 /* QRCodeScanner.swift in Sources */,
 				D5C76ACF2A61AEBA00B7469C /* MailComposeView.swift in Sources */,
+				D53FC7FA2B8F7CE1001753BA /* PDFViewer.swift in Sources */,
 				D5C76AD12A61AEF500B7469C /* MailDemoView.swift in Sources */,
 				D53678582A07C8B50006FAF0 /* DocumentPicker.swift in Sources */,
 				D5DED4C42B596D2A00AADEB3 /* QRCodeScannerView.swift in Sources */,
@@ -464,6 +484,7 @@
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -494,6 +515,7 @@
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",

@@ -31,6 +31,8 @@ struct ContentView: View {
                 Section {
                     NavigationLink("Image viewer", destination: ImageViewerView())
                     NavigationLink("Camera view", destination: CameraDemoView())
+                    NavigationLink("PDF viewer", destination: PDFViewerView())
+                    NavigationLink("PDF image", destination: PDFImageView())
                 } header: {
                     Text("Views")
                 }
