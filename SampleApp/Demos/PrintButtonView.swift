@@ -9,7 +9,7 @@ import SwiftUI
 
 struct PrintButtonView: View {
     var body: some View {
-        PrintButton(image: UIImage(systemName: "globe")) {
+        PrintButton(url: Bundle.main.url(forResource: "sample", withExtension: "pdf")) {
             Label("Print", systemImage: "printer")
         }
     }
