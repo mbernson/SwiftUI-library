@@ -68,20 +68,12 @@ private extension String {
 }
 
 @available(iOS 15.0, *)
-private struct CodeVerificationTextField_Preview: View {
-    @State var code = "123"
-    var body: some View {
+private struct CodeVerificationField_Preview: PreviewProvider {
+    @State static var code = "123"
+    static var previews: some View {
         CodeVerificationField(code: $code, maxDigits: 6) { code in
             print(code)
         }
         .padding()
-    }
-}
-
-#Preview {
-    if #available(iOS 15.0, *) {
-        CodeVerificationTextField_Preview()
-    } else {
-        Text("Only available on iOS 15 and higher.")
     }
 }
