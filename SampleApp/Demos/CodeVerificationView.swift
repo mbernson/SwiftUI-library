@@ -7,7 +7,6 @@
 
 import SwiftUI
 
-@available(iOS 15.0, *)
 struct CodeVerificationView: View {
     @State var code = ""
 

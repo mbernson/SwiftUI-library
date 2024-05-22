@@ -7,7 +7,6 @@
 
 import SwiftUI
 
-@available(iOS 15.0, *)
 struct QRCodeScannerView: View {
     @State var scannedCode: String?
     @State var isAlertPresented = false

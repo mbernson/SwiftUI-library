@@ -8,7 +8,6 @@
 import SwiftUI
 
 /// A field specific to enter numeric verification codes, such as two-factor (SMS) codes.
-@available(iOS 15.0, *)
 struct CodeVerificationField: View {
     @Binding var code: String
     let maxDigits: Int
@@ -67,7 +66,6 @@ private extension String {
     }
 }
 
-@available(iOS 15.0, *)
 private struct CodeVerificationField_Preview: PreviewProvider {
     @State static var code = "123"
     static var previews: some View {

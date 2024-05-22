@@ -7,7 +7,6 @@
 
 import SwiftUI
 
-@available(iOS 15.0, *)
 struct MailDemoView: View {
     @State var emailRecipient = "info@q42.nl"
     @State var emailSubject = "This is the subject"
@@ -33,7 +32,6 @@ struct MailDemoView: View {
     }
 }
 
-@available(iOS 15.0, *)
 struct MailDemoView_Previews: PreviewProvider {
     static var previews: some View {
         MailDemoView()

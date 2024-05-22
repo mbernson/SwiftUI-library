@@ -8,7 +8,6 @@
 import SwiftUI
 import MessageUI
 
-@available(iOS 15.0, *)
 struct MailComposeView: UIViewControllerRepresentable {
   let subject: String
   let toRecipients: [String]
