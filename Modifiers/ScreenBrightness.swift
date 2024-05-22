@@ -32,6 +32,7 @@ private struct ScreenBrightness: ViewModifier {
 }
 
 extension View {
+    /// Increases the screen brightness when the view appears and restores it when the view disappears.
     func increasedScreenBrightness(
         duration: TimeInterval = 0.3,
         ticksPerSecond: Int = UIScreen.main.maximumFramesPerSecond
@@ -40,7 +41,7 @@ extension View {
     }
 }
 
-extension UIScreen {
+private extension UIScreen {
     func setBrightness(to value: CGFloat, duration: TimeInterval = 0.3, ticksPerSecond: Double = 120) {
         let startingBrightness = UIScreen.main.brightness
         let delta = value - startingBrightness

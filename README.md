@@ -8,23 +8,34 @@ Almost all are compatible with iOS 14 and later. Many of these views and modifie
 
 ## Contents
 
-* Views
-    * Generic
-        * ImageViewer: View for zooming/panning a UIImage
-        * QRCodeImage: Display a string/URL/data as a QR code
-        * DocumentPicker: Wrapper for UIDocumentPickerViewController
-        * LegacyShareLink: Wrapper for UIActivityViewController (for using a share sheet when you can't use Apple's ShareLink view)
-        * SafariView: Wrapper for SFSafariViewController
-    * Camera/photo
-        * CameraView: Take a picture using the camera (full screen cover)
-        * PhotoPicker: Pick a photo from the user's Photo library
-        * ImageCropView: Crop an image (uses [RSKImageCropper](https://github.com/ruslanskorb/RSKImageCropper) under the hood)
+* Components
+  * CodeVerificationField - Text input view with separate characters/digits for entering a code.
+  * GridStack - Container view that arranges its child views centered in a grid that grows vertically.
+  * InAppBrowserLink - Component that acts similar to `ShareLink`, opening a URL in an in-app browser (`SFSafariViewController`).
+  * LegacyShareLink - Fallback for the SwiftUI `ShareLink` component that is compatible with iOS 15.
+  * NavigationDestination
+  * PrintButton - Button that allows the user to print a piece of content.
 * Modifiers
-    * DeviceShake: Detect when the device is shaken
-    * ErrorAlert: Present a LocalizedError as an alert
-    * ReadableContentWidth: Constrains a view to the Apple-defined readable content guides
-    * RoundedRectangleCorners: Round only certain corners of a view
-    * ScreenBrightness: Brighten the screen when the view appears, dim again when it disappears
+  * DeviceShake - Adds an action to perform when the device is shaken.
+  * ErrorAlert - Presents a human-readable alert for a localized error.
+  * ReadableContentWidth - Restricts the maximum width of the view to the Apple-defined readable content width.
+  * RoundedRectangleCorners - Applies clipping to this view using corner radius, but only for the specified corners.
+  * ScreenBrightness - Increases the screen brightness when the view appears and restores it when the view disappears.
+* Pickers
+  * DocumentPicker - Pick a document using `UIDocumentPickerViewController`.
+  * PhotoPicker - Pick photos and/or videos using `PHPickerViewController`.
+  * PickerView - Control for selecting a value (optional or non-optional) using custom labels.
+* Views
+  * ImageViewer - View for zooming/panning a UIImage.
+  * PDFImage - Image that displays a PDF.
+  * PDFViewer - View for zooming/panning a PDF.
+  * QRCodeImage - Image that displays encoded data as a QR code.
+  * QRCodeScanner - A view that displays a camera feed, that scans for a QR code.
+  * Sheets
+    * CameraView - View that lets the user take a picture using the camera
+    * ImageCropView - A view that lets the user crop an image using the [RSKImageCropper](https://github.com/ruslanskorb/RSKImageCropper) library.
+    * MailComposeView - A view that lets the user compose an email using the Mail app.
+    * SafariView - A view that presents a URL in an in-app browser using `SFSafariViewController`.
 
 ## Modifiers
 

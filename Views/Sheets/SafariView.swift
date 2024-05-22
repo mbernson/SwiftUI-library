@@ -7,6 +7,7 @@
 import SwiftUI
 import SafariServices
 
+/// A view that presents a URL in an in-app browser using `SFSafariViewController`.
 struct SafariView: View {
     let url: URL
     let configuration: SFSafariViewController.Configuration?

@@ -8,6 +8,7 @@
 import SwiftUI
 import MessageUI
 
+/// A view that lets the user compose an email using the Mail app.
 struct MailComposeView: UIViewControllerRepresentable {
   let subject: String
   let toRecipients: [String]

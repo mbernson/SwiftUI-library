@@ -7,6 +7,7 @@
 
 import SwiftUI
 
+/// A control for selecting a value (optional or non-optional) using custom labels.
 struct PickerView<SelectionValue: Hashable, Label: View>: View {
     @Binding var selection: SelectionValue?
     let isNullable: Bool

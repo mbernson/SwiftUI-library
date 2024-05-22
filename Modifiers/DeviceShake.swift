@@ -22,7 +22,7 @@ extension UIWindow {
      }
 }
 
-// A view modifier that detects shaking and calls a function of our choosing.
+/// Adds an action to perform when the device is shaken.
 private struct DeviceShakeViewModifier: ViewModifier {
     let action: () -> Void
 

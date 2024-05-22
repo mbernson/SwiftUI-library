@@ -23,7 +23,7 @@ private struct ErrorAlert<E: LocalizedError>: ViewModifier {
 }
 
 extension View {
-    /// Presents an alert when a localized error is present.
+    /// Presents a human-readable alert for a localized error
     func errorAlert<E: LocalizedError>(error: Binding<E?>, buttonTitle: LocalizedStringKey = "Ok") -> some View {
         modifier(ErrorAlert(error: error, buttonTitle: buttonTitle))
     }

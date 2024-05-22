@@ -8,6 +8,7 @@
 import SwiftUI
 import UIKit
 
+/// A button that allows the user to print a piece of content.
 struct PrintButton<Label: View>: View {
     private let printItem: PrintItem?
     @StateObject private var model = PrintModel()
