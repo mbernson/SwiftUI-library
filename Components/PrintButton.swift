@@ -19,29 +19,17 @@ struct PrintButton<Label: View>: View {
     }
 
     init(url: URL?, @ViewBuilder label: @escaping () -> Label) {
-        if let url {
-            self.printItem = .url(url)
-        } else {
-            self.printItem = nil
-        }
+        self.printItem = url.map { .url($0) }
         self.label = label
     }
 
     init(data: Data?, @ViewBuilder label: @escaping () -> Label) {
-        if let data {
-            self.printItem = .data(data)
-        } else {
-            self.printItem = nil
-        }
+        self.printItem = data.map { .data($0) }
         self.label = label
     }
 
     init(image: UIImage?, @ViewBuilder label: @escaping () -> Label) {
-        if let image {
-            self.printItem = .image(image)
-        } else {
-            self.printItem = nil
-        }
+        self.printItem = image.map { .image($0) }
         self.label = label
     }
 
