@@ -13,7 +13,7 @@ struct PDFViewer: UIViewRepresentable {
 
     func makeUIView(context: Context) -> PDFView {
         let pdfView = PDFView()
-        pdfView.scaleFactor = pdfView.scaleFactorForSizeToFit
+        pdfView.autoScales = true
         return pdfView
     }
 
