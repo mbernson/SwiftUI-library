@@ -13,12 +13,15 @@ struct PDFViewer: UIViewRepresentable {
 
     func makeUIView(context: Context) -> PDFView {
         let pdfView = PDFView()
+        pdfView.scaleFactor = pdfView.scaleFactorForSizeToFit
         return pdfView
     }
 
     func updateUIView(_ pdfView: PDFView, context: Context) {
-        let document = url.flatMap(PDFDocument.init)
-        pdfView.document = document
+        if pdfView.document?.documentURL != url {
+            let document = url.flatMap(PDFDocument.init)
+            pdfView.document = document
+        }
     }
 }
 
