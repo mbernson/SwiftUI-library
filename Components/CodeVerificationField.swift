@@ -66,12 +66,16 @@ private extension String {
     }
 }
 
-private struct CodeVerificationField_Preview: PreviewProvider {
-    @State static var code = "123"
-    static var previews: some View {
+private struct CodeVerificationField_Preview: View {
+    @State var code = "123"
+    var body: some View {
         CodeVerificationField(code: $code, maxDigits: 6) { code in
             print(code)
         }
         .padding()
     }
+}
+
+#Preview {
+    CodeVerificationField_Preview()
 }
