@@ -17,7 +17,11 @@ struct CameraView: UIViewControllerRepresentable {
     let photoPicked: PhotoPickedHandler
     let dismiss: DismissHandler
 
-    init(cameraDevice: UIImagePickerController.CameraDevice = .rear, photoPicked: @escaping CameraView.PhotoPickedHandler, dismiss: @escaping CameraView.DismissHandler) {
+    init(
+        cameraDevice: UIImagePickerController.CameraDevice = .rear,
+        photoPicked: @escaping PhotoPickedHandler,
+        dismiss: @escaping DismissHandler
+    ) {
         self.cameraDevice = cameraDevice
         self.photoPicked = photoPicked
         self.dismiss = dismiss
@@ -43,7 +47,10 @@ struct CameraView: UIViewControllerRepresentable {
         let photoPickedHandler: PhotoPickedHandler
         let dismissHandler: DismissHandler
 
-        init(photoPickedHandler: @escaping CameraView.PhotoPickedHandler, dismissHandler: @escaping CameraView.DismissHandler) {
+        init(
+            photoPickedHandler: @escaping PhotoPickedHandler,
+            dismissHandler: @escaping DismissHandler
+        ) {
             self.photoPickedHandler = photoPickedHandler
             self.dismissHandler = dismissHandler
         }
