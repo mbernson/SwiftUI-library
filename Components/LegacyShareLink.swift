@@ -8,6 +8,7 @@ import SwiftUI
 import UIKit
 
 /// A fallback for the SwiftUI `ShareLink` component that is compatible with iOS 15.
+@available(iOS, deprecated: 15.0, message: "Use ShareLink instead")
 struct LegacyShareLink<Label: View>: View {
     @ViewBuilder var label: () -> Label
     let activityItems: [Any]
